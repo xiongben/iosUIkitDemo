@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         // 背景颜色
         label.backgroundColor = UIColor.cyan;
         // 设置内容
-        label.text = "hello world!!!"
+        label.text = "hello world!!! this is a test"
         // 设置文字颜色
         label.textColor = UIColor.red
         // 设置字体样式和大小
