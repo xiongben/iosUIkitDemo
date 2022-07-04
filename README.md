@@ -126,4 +126,8 @@ extension Array: TextRepresentable where Element: TextRepresentable {
         
     }
 }
+// 类专用的协议
+protocol SomeClassOnlyProtocol: AnyObject, SomeInheritedProtocol {
+    // class-only protocol definition goes here
+}
 ```
