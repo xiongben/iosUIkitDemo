@@ -84,3 +84,46 @@ func printIntegerKinds(_ numbers: [Int]) {
 
 printIntegerKinds([3, 19, -27, 0, -6, 0, 7])
 ```
+### 3, 协议
+```swift
+protocol SomeProtocal {
+    var mustBeSettable: Int {get set}
+    var doesNotNeedToBeSettable: Int {get}
+}
+
+protocol AnotherProtocal {
+    static var someTypeProperty: Int {get set}
+}
+
+protocol FullyNamed {
+    var fullName: String {get}
+}
+
+struct Person: FullyNamed {
+    var fullName: String
+}
+let john = Person(fullName: "John Appleseed")
+
+// 协议初始化器要求类的实现
+protocol SomeProtocal2 {
+    init(SomeParameter: Int)
+}
+
+class SomeClass: SomeProtocal2 {
+    required init(SomeParameter: Int) {
+        print(String(SomeParameter))
+    }
+}
+
+// 有条件的遵循协议
+
+protocol TextRepresentable {
+    var textualDescription: String { get }
+}
+
+extension Array: TextRepresentable where Element: TextRepresentable {
+    var textualDescription: String {
+        
+    }
+}
+```
