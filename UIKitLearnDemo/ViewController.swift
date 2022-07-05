@@ -15,6 +15,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let firstView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        self.view.addSubview(firstView)
+        firstView.center = CGPoint(x: fullSize.width*0.5, y: fullSize.height*0.5)
+        firstView.backgroundColor = UIColor.blue
+        
         // 建立前往 Intro 頁面的 UIButton
         let myButton = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
         myButton.setTitle("Intro", for: .normal)
