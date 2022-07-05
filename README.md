@@ -131,3 +131,15 @@ protocol SomeClassOnlyProtocol: AnyObject, SomeInheritedProtocol {
     // class-only protocol definition goes here
 }
 ```
+### 4,泛型
+
+由于协议中不能使用泛型，所以使用关联类型代替泛型，泛型只能用于class、struct
+```swift
+protocol Stackable {
+	associatedtype Element // 关联类型
+    mutating func push(_ element: Element) // mutating 不能用于class，可用于struct、enum, 可能被struct实现所以用mutating, 会改变struct的内存时要使用mutating
+    mutating func pop() -> Element
+    func top() -> Element
+    func size() -> Int
+}
+```
