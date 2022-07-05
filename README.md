@@ -142,4 +142,13 @@ protocol Stackable {
     func top() -> Element
     func size() -> Int
 }
+// 一个函数可以返回不同的协议类型。 相反，它每次必须返回相同的不透明类型：
+///自定义协议
+protocol P {}
+///拓展基础类型
+extension Int: P {}
+extension String: P {}
+///区别
+func makeIntOrString(_ isInt: Bool) -> P { isInt ? 1 : "1" } // ✅
+func makeIntOrStringOpaque(_ isInt: Bool) -> some P { isInt ? 1 : "1" } // ❌ Compilation error
 ```
