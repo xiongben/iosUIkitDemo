@@ -85,6 +85,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.view.addSubview(myButton)
         myButton.isHidden = true
         
+        // 提示框
+        let popbtn = UIButton(type: .system)
+        popbtn.frame = CGRect(x: 0, y: 0, width: 100, height: 30)
+        popbtn.setTitle("simple warn", for: .normal)
+        popbtn.backgroundColor = UIColor.init(red: 0.9, green: 0.9, blue: 0.9, alpha: 1)
+        popbtn.addTarget(nil, action: #selector(self.bottomAlert), for: .touchUpInside)
+        popbtn.center = CGPoint(x: fullSize.width * 0.5, y: fullSize.height * 0.4)
+        self.view.addSubview(popbtn)
+        popbtn.isHidden = true
     }
 
     
@@ -117,6 +126,46 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     @objc func sendFB() {
         print("sendFB")
+    }
+    
+    @objc func simpleHint() {
+        // 建立一個提示框
+        let alertController = UIAlertController(
+            title: "提示",
+            message: "一個簡單提示，請按確認繼續",
+            preferredStyle: .alert)
+
+        // 建立[確認]按鈕
+        let okAction = UIAlertAction(
+            title: "確認",
+            style: .default,
+            handler: {
+            (action: UIAlertAction!) -> Void in
+              print("按下確認後，閉包裡的動作")
+        })
+        alertController.addAction(okAction)
+        
+        self.present(
+            alertController,
+            animated: true,
+            completion: nil
+        )
+    }
+    
+    @objc func bottomAlert() {
+        // 建立一個提示框
+        let alertController = UIAlertController(title: "底部提示", message: "這個提示會從底部彈出", preferredStyle: .actionSheet)
+        
+        // 建立[取消]按鈕
+        let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        
+        // 建立[確認]按鈕
+        let okAction = UIAlertAction(title: "確認", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        
+        // 顯示提示框
+        self.present(alertController, animated: true, completion: nil)
     }
 }
 
