@@ -7,18 +7,74 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
     // 取得螢幕的尺寸
     let fullSize = UIScreen.main.bounds.size
+    var myTextView: UITextView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let firstView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-        self.view.addSubview(firstView)
-        firstView.center = CGPoint(x: fullSize.width*0.5, y: fullSize.height*0.5)
-        firstView.backgroundColor = UIColor.blue
+//        let firstView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+//        self.view.addSubview(firstView)
+//        firstView.center = CGPoint(x: fullSize.width*0.5, y: fullSize.height*0.5)
+//        firstView.backgroundColor = UIColor.blue
+        
+//        // UILabel练习
+//        let myLabel = UILabel(frame: CGRect(x: 0, y: 50, width: 300, height: 80))
+//        myLabel.text = "swift 起步走"
+//        myLabel.textColor = UIColor.red
+//        myLabel.textAlignment = .right
+//        myLabel.backgroundColor = UIColor.orange
+//        self.view.addSubview(myLabel)
+        
+        // UITextField
+        let myTextField = UITextField(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
+        myTextField.placeholder = "请输入文字"
+        myTextField.borderStyle = .roundedRect
+        myTextField.clearButtonMode = .whileEditing
+        myTextField.returnKeyType = .done
+        myTextField.textColor = UIColor.blue
+        myTextField.backgroundColor = UIColor.lightGray
+        myTextField.center = CGPoint(x: fullSize.width * 0.5, y: fullSize.height * 0.5)
+        myTextField.delegate = self
+        self.view.addSubview(myTextField)
+        myTextField.isHidden = true
+        
+        // UITextView
+        myTextView = UITextView(frame: CGRect(x: 0, y: 0, width: 250, height: 60))
+        myTextView.backgroundColor = UIColor.darkGray
+        myTextView.textColor = UIColor.white
+        myTextView.textAlignment = .left
+        myTextView.text = "this is a test"
+        myTextView.isEditable = true
+        myTextView.isSelectable = true
+        myTextView.center = CGPoint(x: fullSize.width * 0.5, y: fullSize.height * 0.6)
+        self.view.addSubview(myTextView)
+        // 建立兩個新的選項
+        let mail = UIMenuItem(
+          title: "寄送",
+          action: #selector(ViewController.sendMail))
+        let facebook = UIMenuItem(
+          title: "FB",
+          action: #selector(ViewController.sendFB))
+
+        // 建立選單
+        let menu = UIMenuController.shared
+
+        // 將新的選項加入選單
+        menu.menuItems = [mail,facebook]
+        
+        // 增加一個觸控事件
+        let tap = UITapGestureRecognizer(target: self, action: #selector(ViewController.hideKeyboard(tapG:)))
+
+        tap.cancelsTouchesInView = false
+        
+        // 加在最基底的 self.view 上
+        self.view.addGestureRecognizer(tap)
+        myTextView.isHidden = true
+        
         
         // 建立前往 Intro 頁面的 UIButton
         let myButton = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
@@ -27,6 +83,8 @@ class ViewController: UIViewController {
         myButton.addTarget(self, action: #selector(goIntro), for: .touchDown)
         myButton.center = CGPoint(x: fullSize.width * 0.5, y: fullSize.height * 0.4)
         self.view.addSubview(myButton)
+        myButton.isHidden = true
+        
     }
 
     
@@ -39,6 +97,26 @@ class ViewController: UIViewController {
         let introViewController = IntroViewController()
         print("viewWillDisappear")
         self.present(introViewController, animated: true, completion: nil)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return true
+    }
+    
+    @objc func hideKeyboard(tapG:UITapGestureRecognizer){
+        // 除了使用 self.view.endEditing(true)
+        // 也可以用 resignFirstResponder()
+        // 來針對一個元件隱藏鍵盤
+        self.myTextView.resignFirstResponder()
+    }
+    
+    @objc func sendMail() {
+        print("sendMail")
+    }
+
+    @objc func sendFB() {
+        print("sendFB")
     }
 }
 
