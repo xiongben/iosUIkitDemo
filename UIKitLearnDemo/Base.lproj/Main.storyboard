@@ -16,13 +16,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="练习页面" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44I-BG-IhV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="练习页面" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44I-BG-IhV">
                                 <rect key="frame" x="147" y="98" width="120" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="FMc-Zo-AZv"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCU-Gh-yHV">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCU-Gh-yHV">
                                 <rect key="frame" x="127" y="800" width="160" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="Ep1-bM-J79"/>
@@ -36,16 +39,26 @@
                                     <segue destination="FVA-sH-JJr" kind="show" id="JTd-my-w7f"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tmi-I5-jBF">
+                                <rect key="frame" x="174.5" y="724" width="92.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="table page"/>
+                                <connections>
+                                    <segue destination="nuQ-gT-kv2" kind="show" id="x1h-TW-Syc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="D4s-eL-6cG"/>
                         <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                         <color key="tintColor" systemColor="systemMintColor"/>
                         <constraints>
-                            <constraint firstItem="D4s-eL-6cG" firstAttribute="bottom" secondItem="yCU-Gh-yHV" secondAttribute="bottom" constant="176" id="2Ug-Eh-Rft"/>
-                            <constraint firstItem="yCU-Gh-yHV" firstAttribute="centerX" secondItem="2x9-UM-sbR" secondAttribute="centerX" id="RNv-sF-yfi"/>
-                            <constraint firstItem="44I-BG-IhV" firstAttribute="centerX" secondItem="2x9-UM-sbR" secondAttribute="centerX" id="jKy-5h-xQK"/>
-                            <constraint firstItem="44I-BG-IhV" firstAttribute="leading" secondItem="D4s-eL-6cG" secondAttribute="leading" constant="172.5" id="nEJ-XE-RVa"/>
-                            <constraint firstItem="44I-BG-IhV" firstAttribute="top" secondItem="2x9-UM-sbR" secondAttribute="topMargin" constant="-13" id="q5O-4U-n3y"/>
+                            <constraint firstItem="D4s-eL-6cG" firstAttribute="bottom" secondItem="yCU-Gh-yHV" secondAttribute="bottom" constant="22" id="249-mR-sMI"/>
+                            <constraint firstItem="44I-BG-IhV" firstAttribute="trailing" secondItem="Tmi-I5-jBF" secondAttribute="trailing" id="4yb-Gc-QM1"/>
+                            <constraint firstItem="44I-BG-IhV" firstAttribute="leading" secondItem="D4s-eL-6cG" secondAttribute="leading" constant="147" id="Aue-Nb-54J"/>
+                            <constraint firstItem="yCU-Gh-yHV" firstAttribute="top" secondItem="Tmi-I5-jBF" secondAttribute="bottom" constant="45" id="FXN-uI-snj"/>
+                            <constraint firstItem="44I-BG-IhV" firstAttribute="top" secondItem="D4s-eL-6cG" secondAttribute="top" constant="10" id="MfZ-JO-mrw"/>
+                            <constraint firstItem="yCU-Gh-yHV" firstAttribute="centerX" secondItem="44I-BG-IhV" secondAttribute="centerX" id="ciC-Yd-wPk"/>
+                            <constraint firstItem="yCU-Gh-yHV" firstAttribute="centerX" secondItem="2x9-UM-sbR" secondAttribute="centerX" id="hod-Gn-CmG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="UaD-1v-fjO"/>
@@ -79,16 +92,16 @@
             </objects>
             <point key="canvasLocation" x="1357.9710144927537" y="-767.41071428571422"/>
         </scene>
-        <!--Intro View Controller-->
+        <!--Table View Controller-->
         <scene sceneID="iUI-gk-uDi">
             <objects>
-                <viewController id="nuQ-gT-kv2" customClass="IntroViewController" sceneMemberID="viewController">
+                <viewController id="nuQ-gT-kv2" customClass="TableViewController" customModule="UIKitLearnDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xid-Wo-ibr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="second page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQr-Z5-Ppy">
-                                <rect key="frame" x="108" y="138" width="199" height="43"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="third page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQr-Z5-Ppy">
+                                <rect key="frame" x="108" y="138" width="155" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
@@ -98,6 +111,7 @@
                         <viewLayoutGuide key="safeArea" id="AVw-Hk-i94"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="tIW-hs-OAi"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o7x-cI-jRz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

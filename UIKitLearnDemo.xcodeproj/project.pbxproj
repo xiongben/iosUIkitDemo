@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8406790B2875D244006A5213 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8406790A2875D244006A5213 /* TableViewController.swift */; };
 		8432B7182874659A008D838B /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432B7172874659A008D838B /* IntroViewController.swift */; };
 		849B84CC2869ECD4002DA7BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B84CB2869ECD4002DA7BA /* AppDelegate.swift */; };
 		849B84CE2869ECD4002DA7BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B84CD2869ECD4002DA7BA /* SceneDelegate.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8406790A2875D244006A5213 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		8432B7172874659A008D838B /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		849B84C82869ECD4002DA7BA /* UIKitLearnDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitLearnDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		849B84CB2869ECD4002DA7BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				849B84CD2869ECD4002DA7BA /* SceneDelegate.swift */,
 				849B84CF2869ECD4002DA7BA /* ViewController.swift */,
 				8432B7172874659A008D838B /* IntroViewController.swift */,
+				8406790A2875D244006A5213 /* TableViewController.swift */,
 				849B84D12869ECD4002DA7BA /* Main.storyboard */,
 				849B84D42869ECD4002DA7BA /* Assets.xcassets */,
 				849B84D62869ECD4002DA7BA /* LaunchScreen.storyboard */,
@@ -264,6 +267,7 @@
 				849B84D02869ECD4002DA7BA /* ViewController.swift in Sources */,
 				849B84CC2869ECD4002DA7BA /* AppDelegate.swift in Sources */,
 				849B84CE2869ECD4002DA7BA /* SceneDelegate.swift in Sources */,
+				8406790B2875D244006A5213 /* TableViewController.swift in Sources */,
 				8432B7182874659A008D838B /* IntroViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
