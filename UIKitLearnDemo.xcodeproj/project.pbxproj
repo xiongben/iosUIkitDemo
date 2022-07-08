@@ -18,6 +18,9 @@
 		849B84E32869ECD4002DA7BA /* UIKitLearnDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B84E22869ECD4002DA7BA /* UIKitLearnDemoTests.swift */; };
 		849B84ED2869ECD4002DA7BA /* UIKitLearnDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B84EC2869ECD4002DA7BA /* UIKitLearnDemoUITests.swift */; };
 		849B84EF2869ECD4002DA7BA /* UIKitLearnDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B84EE2869ECD4002DA7BA /* UIKitLearnDemoUITestsLaunchTests.swift */; };
+		84BA2D252878639300CB0979 /* UICollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA2D242878639300CB0979 /* UICollectionVC.swift */; };
+		84BA2D27287863DB00CB0979 /* NSUserDefaultsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA2D26287863DB00CB0979 /* NSUserDefaultsVC.swift */; };
+		84BA2D29287872F500CB0979 /* ListBtnCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA2D28287872F500CB0979 /* ListBtnCV.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		849B84E82869ECD4002DA7BA /* UIKitLearnDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIKitLearnDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		849B84EC2869ECD4002DA7BA /* UIKitLearnDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitLearnDemoUITests.swift; sourceTree = "<group>"; };
 		849B84EE2869ECD4002DA7BA /* UIKitLearnDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitLearnDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		84BA2D242878639300CB0979 /* UICollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionVC.swift; sourceTree = "<group>"; };
+		84BA2D26287863DB00CB0979 /* NSUserDefaultsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSUserDefaultsVC.swift; sourceTree = "<group>"; };
+		84BA2D28287872F500CB0979 /* ListBtnCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBtnCV.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +114,9 @@
 				849B84CF2869ECD4002DA7BA /* ViewController.swift */,
 				8432B7172874659A008D838B /* IntroViewController.swift */,
 				8406790A2875D244006A5213 /* TableViewController.swift */,
+				84BA2D242878639300CB0979 /* UICollectionVC.swift */,
+				84BA2D28287872F500CB0979 /* ListBtnCV.swift */,
+				84BA2D26287863DB00CB0979 /* NSUserDefaultsVC.swift */,
 				849B84D12869ECD4002DA7BA /* Main.storyboard */,
 				849B84D42869ECD4002DA7BA /* Assets.xcassets */,
 				849B84D62869ECD4002DA7BA /* LaunchScreen.storyboard */,
@@ -266,8 +275,11 @@
 			files = (
 				849B84D02869ECD4002DA7BA /* ViewController.swift in Sources */,
 				849B84CC2869ECD4002DA7BA /* AppDelegate.swift in Sources */,
+				84BA2D252878639300CB0979 /* UICollectionVC.swift in Sources */,
+				84BA2D29287872F500CB0979 /* ListBtnCV.swift in Sources */,
 				849B84CE2869ECD4002DA7BA /* SceneDelegate.swift in Sources */,
 				8406790B2875D244006A5213 /* TableViewController.swift in Sources */,
+				84BA2D27287863DB00CB0979 /* NSUserDefaultsVC.swift in Sources */,
 				8432B7182874659A008D838B /* IntroViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

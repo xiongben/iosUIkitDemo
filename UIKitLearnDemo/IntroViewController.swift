@@ -26,12 +26,12 @@ class IntroViewController : UIViewController, UITextFieldDelegate, WKNavigationD
         myLabel.text = "Intro 頁"
         self.view.addSubview(myLabel)
         
-        myWebView = WKWebView(frame: CGRect(x: 0, y: 30, width: fullSize.width,height: fullSize.height - 30))
-        myWebView.navigationDelegate = self
-        self.view.addSubview(myWebView)
-        let myURL = URL(string:"https://www.baidu.com")
-        let myRequest = URLRequest(url: myURL!)
-        myWebView.load(myRequest)
+//        myWebView = WKWebView(frame: CGRect(x: 0, y: 30, width: fullSize.width,height: fullSize.height - 30))
+//        myWebView.navigationDelegate = self
+//        self.view.addSubview(myWebView)
+//        let myURL = URL(string:"https://www.baidu.com")
+//        let myRequest = URLRequest(url: myURL!)
+//        myWebView.load(myRequest)
 
         
         
