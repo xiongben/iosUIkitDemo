@@ -194,10 +194,10 @@
             </objects>
             <point key="canvasLocation" x="539" y="788"/>
         </scene>
-        <!--View Controller-->
+        <!--Scroll ViewCV-->
         <scene sceneID="BlT-Qd-621">
             <objects>
-                <viewController id="8E8-uN-Mpb" sceneMemberID="viewController">
+                <viewController id="8E8-uN-Mpb" customClass="ScrollViewCV" customModule="UIKitLearnDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zpP-SE-JDE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -245,7 +245,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Rz-Cg-JM3">
                                                 <rect key="frame" x="200" y="0.0" width="154" height="50"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="简单动画"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="scroll demo"/>
                                                 <connections>
                                                     <segue destination="8E8-uN-Mpb" kind="show" id="fwQ-Pd-CcO"/>
                                                 </connections>
