@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8406790B2875D244006A5213 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8406790A2875D244006A5213 /* TableViewController.swift */; };
+		840DE19F2879767A00CBCE98 /* SearchPageCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840DE19E2879767A00CBCE98 /* SearchPageCV.swift */; };
 		8432B7182874659A008D838B /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432B7172874659A008D838B /* IntroViewController.swift */; };
 		849B84CC2869ECD4002DA7BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B84CB2869ECD4002DA7BA /* AppDelegate.swift */; };
 		849B84CE2869ECD4002DA7BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B84CD2869ECD4002DA7BA /* SceneDelegate.swift */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		8406790A2875D244006A5213 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		840DE19E2879767A00CBCE98 /* SearchPageCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPageCV.swift; sourceTree = "<group>"; };
 		8432B7172874659A008D838B /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		849B84C82869ECD4002DA7BA /* UIKitLearnDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitLearnDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		849B84CB2869ECD4002DA7BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				849B84CD2869ECD4002DA7BA /* SceneDelegate.swift */,
 				849B84CF2869ECD4002DA7BA /* ViewController.swift */,
 				8432B7172874659A008D838B /* IntroViewController.swift */,
+				840DE19E2879767A00CBCE98 /* SearchPageCV.swift */,
 				8406790A2875D244006A5213 /* TableViewController.swift */,
 				84BA2D242878639300CB0979 /* UICollectionVC.swift */,
 				84BA2D28287872F500CB0979 /* ListBtnCV.swift */,
@@ -277,6 +280,7 @@
 				849B84CC2869ECD4002DA7BA /* AppDelegate.swift in Sources */,
 				84BA2D252878639300CB0979 /* UICollectionVC.swift in Sources */,
 				84BA2D29287872F500CB0979 /* ListBtnCV.swift in Sources */,
+				840DE19F2879767A00CBCE98 /* SearchPageCV.swift in Sources */,
 				849B84CE2869ECD4002DA7BA /* SceneDelegate.swift in Sources */,
 				8406790B2875D244006A5213 /* TableViewController.swift in Sources */,
 				84BA2D27287863DB00CB0979 /* NSUserDefaultsVC.swift in Sources */,

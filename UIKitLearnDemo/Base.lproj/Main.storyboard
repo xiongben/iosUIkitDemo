@@ -292,7 +292,10 @@
                                                     <constraint firstAttribute="height" constant="50" id="vme-4S-4Jc"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="search page"/>
+                                                <connections>
+                                                    <segue destination="2yv-MW-aaC" kind="show" id="nVx-QH-t4d"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -358,6 +361,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HzU-Fh-r9b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1928" y="788"/>
+        </scene>
+        <!--Search PageCV-->
+        <scene sceneID="Fp2-ed-6cI">
+            <objects>
+                <viewController id="2yv-MW-aaC" customClass="SearchPageCV" customModule="UIKitLearnDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O7n-H1-ST3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="7pu-Al-Gkg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="B78-3u-Hlz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b50-my-Z5O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2632" y="788"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="zkR-sH-5cc">
