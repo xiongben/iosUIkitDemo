@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     // 取得螢幕的尺寸
     let fullSize = UIScreen.main.bounds.size
@@ -94,11 +94,30 @@ class ViewController: UIViewController, UITextFieldDelegate {
         popbtn.center = CGPoint(x: fullSize.width * 0.5, y: fullSize.height * 0.4)
         self.view.addSubview(popbtn)
         popbtn.isHidden = true
+        
+        let myButton2 = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
+        myButton2.setTitle("photo", for: .normal)
+        myButton2.backgroundColor = UIColor.lightGray
+        myButton2.addTarget(self, action: #selector(photoFn), for: .touchDown)
+        myButton2.center = CGPoint(x: fullSize.width * 0.5, y: fullSize.height * 0.4)
+        self.view.addSubview(myButton2)
     }
 
     
     override func viewWillLayoutSubviews() {
             super.viewWillLayoutSubviews()
+    }
+    
+    @objc func photoFn() {
+        let imagePicker = UIImagePickerController()
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            print("99999")
+            imagePicker.sourceType = .camera
+        } else {
+            print("22222")
+            imagePicker.sourceType = .photoLibrary
+        }
+        imagePicker.delegate = self
     }
     
     @objc func goIntro() {
