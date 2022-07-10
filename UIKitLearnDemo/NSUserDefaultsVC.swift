@@ -16,11 +16,23 @@ class NSUserDefaultsVC : UIViewController  {
         
         self.view.backgroundColor = UIColor.white
         
-        // 頁面標題
+    
+        // 取得儲存的預設資料
+        let myUserDefaults = UserDefaults.standard
+        
+        // 顯示儲存資訊的 UILabel
         let myLabel = UILabel(frame: CGRect(x: 0, y: 0, width: fullSize.width, height: 40))
-        myLabel.center = CGPoint(x: fullSize.width * 0.5, y: fullSize.height * 0.08)
+        myLabel.textColor = UIColor.brown
         myLabel.textAlignment = .center
-        myLabel.text = "Intro 頁"
+        myLabel.center = CGPoint(x: fullSize.width * 0.5, y: fullSize.height * 0.25)
+        
+        if let info = myUserDefaults.object(forKey: "info") as? String {
+            myLabel.text = info
+        } else {
+            myLabel.text = "尚未儲存資訊"
+            myLabel.textColor = UIColor.red
+        }
+        
         self.view.addSubview(myLabel)
         
     }

@@ -12,6 +12,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationControl
     // 取得螢幕的尺寸
     let fullSize = UIScreen.main.bounds.size
     var myTextView: UITextView!
+    let imagePicker = UIImagePickerController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -101,6 +102,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationControl
         myButton2.addTarget(self, action: #selector(photoFn), for: .touchDown)
         myButton2.center = CGPoint(x: fullSize.width * 0.5, y: fullSize.height * 0.4)
         self.view.addSubview(myButton2)
+        
+        imagePicker.delegate = self
     }
 
     
@@ -109,7 +112,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationControl
     }
     
     @objc func photoFn() {
-        let imagePicker = UIImagePickerController()
+        
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             print("99999")
             imagePicker.sourceType = .camera
@@ -117,7 +120,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationControl
             print("22222")
             imagePicker.sourceType = .photoLibrary
         }
-        imagePicker.delegate = self
+        present(imagePicker, animated: true, completion: nil)
     }
     
     @objc func goIntro() {

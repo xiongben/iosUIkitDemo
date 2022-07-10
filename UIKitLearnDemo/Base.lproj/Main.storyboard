@@ -385,10 +385,10 @@
             </objects>
             <point key="canvasLocation" x="-333.33333333333337" y="-761.38392857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--User DefaultsVC-->
         <scene sceneID="kHw-5t-dip">
             <objects>
-                <viewController id="AVx-tk-lRM" sceneMemberID="viewController">
+                <viewController id="AVx-tk-lRM" customClass="NSUserDefaultsVC" customModule="UIKitLearnDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u6O-UY-6jF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
