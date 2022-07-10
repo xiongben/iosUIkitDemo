@@ -11,6 +11,7 @@
 		840DE19F2879767A00CBCE98 /* SearchPageCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840DE19E2879767A00CBCE98 /* SearchPageCV.swift */; };
 		840DE1A12879A8D300CBCE98 /* ScrollViewCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840DE1A02879A8D300CBCE98 /* ScrollViewCV.swift */; };
 		840DE1A42879C1C300CBCE98 /* ContactsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840DE1A32879C1C300CBCE98 /* ContactsUI.framework */; };
+		840DE1A8287AC7FF00CBCE98 /* ExAnimationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840DE1A7287AC7FF00CBCE98 /* ExAnimationVC.swift */; };
 		8432B7182874659A008D838B /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432B7172874659A008D838B /* IntroViewController.swift */; };
 		849B84CC2869ECD4002DA7BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B84CB2869ECD4002DA7BA /* AppDelegate.swift */; };
 		849B84CE2869ECD4002DA7BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B84CD2869ECD4002DA7BA /* SceneDelegate.swift */; };
@@ -48,6 +49,7 @@
 		840DE19E2879767A00CBCE98 /* SearchPageCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPageCV.swift; sourceTree = "<group>"; };
 		840DE1A02879A8D300CBCE98 /* ScrollViewCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewCV.swift; sourceTree = "<group>"; };
 		840DE1A32879C1C300CBCE98 /* ContactsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ContactsUI.framework; path = System/Library/Frameworks/ContactsUI.framework; sourceTree = SDKROOT; };
+		840DE1A7287AC7FF00CBCE98 /* ExAnimationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExAnimationVC.swift; sourceTree = "<group>"; };
 		8432B7172874659A008D838B /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		849B84C82869ECD4002DA7BA /* UIKitLearnDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitLearnDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		849B84CB2869ECD4002DA7BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				84BA2D242878639300CB0979 /* UICollectionVC.swift */,
 				840DE1A02879A8D300CBCE98 /* ScrollViewCV.swift */,
 				84BA2D28287872F500CB0979 /* ListBtnCV.swift */,
+				840DE1A7287AC7FF00CBCE98 /* ExAnimationVC.swift */,
 				84BA2D26287863DB00CB0979 /* NSUserDefaultsVC.swift */,
 				849B84D12869ECD4002DA7BA /* Main.storyboard */,
 				849B84D42869ECD4002DA7BA /* Assets.xcassets */,
@@ -298,6 +301,7 @@
 				84BA2D29287872F500CB0979 /* ListBtnCV.swift in Sources */,
 				840DE19F2879767A00CBCE98 /* SearchPageCV.swift in Sources */,
 				849B84CE2869ECD4002DA7BA /* SceneDelegate.swift in Sources */,
+				840DE1A8287AC7FF00CBCE98 /* ExAnimationVC.swift in Sources */,
 				8406790B2875D244006A5213 /* TableViewController.swift in Sources */,
 				84BA2D27287863DB00CB0979 /* NSUserDefaultsVC.swift in Sources */,
 				8432B7182874659A008D838B /* IntroViewController.swift in Sources */,
@@ -477,6 +481,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VNTHT2GLVP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UIKitLearnDemo/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "";
@@ -489,6 +494,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -509,6 +515,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VNTHT2GLVP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UIKitLearnDemo/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "";
@@ -521,6 +528,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
