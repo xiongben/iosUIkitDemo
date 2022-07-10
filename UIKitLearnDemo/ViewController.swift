@@ -114,10 +114,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationControl
     @objc func photoFn() {
         
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            print("99999")
             imagePicker.sourceType = .camera
         } else {
-            print("22222")
             imagePicker.sourceType = .photoLibrary
         }
         present(imagePicker, animated: true, completion: nil)
