@@ -84,62 +84,24 @@ class NSUserDefaultsVC : UIViewController  {
             let name = Expression<String?>("name")
             let email = Expression<String>("email")
 
-            try! db?.run(users.create(ifNotExists: true, block: { (table) in
+            try db?.run(users.create(ifNotExists: true, block: { (table) in
                 table.column(id, primaryKey: true)
                 table.column(name)
                 table.column(email, unique: true)
             }))
             
             let insert = users.insert(name <- "究极死胖兽", email <- "scuxiatian@foxmail.com")
-            let rowid = (try! db?.run(insert))!
+            _ = (try! db?.run(insert))!
+            
             let insert2 = users.insert(name <- "Amazing7", email <- "360898864@qq.com")
-            let rowid2 = (try! db?.run(insert2))!
+            _ = (try! db?.run(insert2))!
             
-            
+          
             for user in (try! db?.prepare(users))! {
-                        print("Query:id: \(user[id]), name: \(user[name]), email: \(user[email])")
-                    }
-//            let db = try Connection("path/to/db.sqlite3")
+                print("Query:id: \(user[id]), name: \(user[name] ?? ""), email: \(user[email])")
+             }
 
-//            let users = Table("users")
-//            let id = Expression<Int64>("id")
-//            let name = Expression<String?>("name")
-//            let email = Expression<String>("email")
-//
-//            try db.run(users.create { t in
-//                t.column(id, primaryKey: true)
-//                t.column(name)
-//                t.column(email, unique: true)
-//            })
-//            // CREATE TABLE "users" (
-//            //     "id" INTEGER PRIMARY KEY NOT NULL,
-//            //     "name" TEXT,
-//            //     "email" TEXT NOT NULL UNIQUE
-//            // )
-//
-//            let insert = users.insert(name <- "Alice", email <- "alice@mac.com")
-//            let rowid = try db.run(insert)
-//            // INSERT INTO "users" ("name", "email") VALUES ('Alice', 'alice@mac.com')
-//
-//            for user in try db.prepare(users) {
-//                print("id: \(user[id]), name: \(user[name]), email: \(user[email])")
-//                // id: 1, name: Optional("Alice"), email: alice@mac.com
-//            }
-//            // SELECT * FROM "users"
-//
-//            let alice = users.filter(id == rowid)
-//
-//            try db.run(alice.update(email <- email.replace("mac.com", with: "me.com")))
-//            // UPDATE "users" SET "email" = replace("email", 'mac.com', 'me.com')
-//            // WHERE ("id" = 1)
-//
-//            try db.run(alice.delete())
-//            // DELETE FROM "users" WHERE ("id" = 1)
-//
-//            try db.scalar(users.count) // 0
-            // SELECT count(*) FROM "users"
         } catch {
-            print("ttttt")
             print (error)
         }
     }
