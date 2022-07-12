@@ -334,6 +334,9 @@
                                                 <rect key="frame" x="200" y="0.0" width="154" height="50"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                <connections>
+                                                    <segue destination="BTy-3B-5Eg" kind="show" id="bOS-8U-O3z"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -416,6 +419,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b50-my-Z5O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2632" y="788"/>
+        </scene>
+        <!--My ProgressVC-->
+        <scene sceneID="Y8a-HW-kaV">
+            <objects>
+                <viewController id="BTy-3B-5Eg" customClass="MyProgressVC" customModule="UIKitLearnDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jGG-aH-bz6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="PyC-Lv-r2P"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="LrL-YQ-zow"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lfz-lm-ieW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3296" y="788"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="zkR-sH-5cc">

@@ -80,15 +80,15 @@ class NSUserDefaultsVC : UIViewController  {
             
             
             let users = Table("users")
-                    let id = Expression<Int64>("id")
-                    let name = Expression<String?>("name")
-                    let email = Expression<String>("email")
+            let id = Expression<Int64>("id")
+            let name = Expression<String?>("name")
+            let email = Expression<String>("email")
 
-                    try! db?.run(users.create(ifNotExists: true, block: { (table) in
-                        table.column(id, primaryKey: true)
-                        table.column(name)
-                        table.column(email, unique: true)
-                    }))
+            try! db?.run(users.create(ifNotExists: true, block: { (table) in
+                table.column(id, primaryKey: true)
+                table.column(name)
+                table.column(email, unique: true)
+            }))
             
             let insert = users.insert(name <- "究极死胖兽", email <- "scuxiatian@foxmail.com")
             let rowid = (try! db?.run(insert))!

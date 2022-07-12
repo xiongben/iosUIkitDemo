@@ -23,6 +23,7 @@
 		849B84E32869ECD4002DA7BA /* UIKitLearnDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B84E22869ECD4002DA7BA /* UIKitLearnDemoTests.swift */; };
 		849B84ED2869ECD4002DA7BA /* UIKitLearnDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B84EC2869ECD4002DA7BA /* UIKitLearnDemoUITests.swift */; };
 		849B84EF2869ECD4002DA7BA /* UIKitLearnDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B84EE2869ECD4002DA7BA /* UIKitLearnDemoUITestsLaunchTests.swift */; };
+		84A83674287DBD83005A6A99 /* MyProgressVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A83673287DBD82005A6A99 /* MyProgressVC.swift */; };
 		84BA2D252878639300CB0979 /* UICollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA2D242878639300CB0979 /* UICollectionVC.swift */; };
 		84BA2D27287863DB00CB0979 /* NSUserDefaultsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA2D26287863DB00CB0979 /* NSUserDefaultsVC.swift */; };
 		84BA2D29287872F500CB0979 /* ListBtnCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA2D28287872F500CB0979 /* ListBtnCV.swift */; };
@@ -65,6 +66,7 @@
 		849B84E82869ECD4002DA7BA /* UIKitLearnDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIKitLearnDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		849B84EC2869ECD4002DA7BA /* UIKitLearnDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitLearnDemoUITests.swift; sourceTree = "<group>"; };
 		849B84EE2869ECD4002DA7BA /* UIKitLearnDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitLearnDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		84A83673287DBD82005A6A99 /* MyProgressVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProgressVC.swift; sourceTree = "<group>"; };
 		84BA2D242878639300CB0979 /* UICollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionVC.swift; sourceTree = "<group>"; };
 		84BA2D26287863DB00CB0979 /* NSUserDefaultsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSUserDefaultsVC.swift; sourceTree = "<group>"; };
 		84BA2D28287872F500CB0979 /* ListBtnCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBtnCV.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				84BA2D28287872F500CB0979 /* ListBtnCV.swift */,
 				840DE1A7287AC7FF00CBCE98 /* ExAnimationVC.swift */,
 				84BA2D26287863DB00CB0979 /* NSUserDefaultsVC.swift */,
+				84A83673287DBD82005A6A99 /* MyProgressVC.swift */,
 				849B84D12869ECD4002DA7BA /* Main.storyboard */,
 				849B84D42869ECD4002DA7BA /* Assets.xcassets */,
 				849B84D62869ECD4002DA7BA /* LaunchScreen.storyboard */,
@@ -307,6 +310,7 @@
 				840DE1A12879A8D300CBCE98 /* ScrollViewCV.swift in Sources */,
 				84BA2D252878639300CB0979 /* UICollectionVC.swift in Sources */,
 				84BA2D29287872F500CB0979 /* ListBtnCV.swift in Sources */,
+				84A83674287DBD83005A6A99 /* MyProgressVC.swift in Sources */,
 				840DE19F2879767A00CBCE98 /* SearchPageCV.swift in Sources */,
 				849B84CE2869ECD4002DA7BA /* SceneDelegate.swift in Sources */,
 				840DE1A8287AC7FF00CBCE98 /* ExAnimationVC.swift in Sources */,
