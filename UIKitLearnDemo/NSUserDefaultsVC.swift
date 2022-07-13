@@ -90,9 +90,9 @@ class NSUserDefaultsVC : UIViewController  {
                 table.column(email, unique: true)
             }))
             
+            
             let insert = users.insert(name <- "究极死胖兽", email <- "scuxiatian@foxmail.com")
             _ = (try! db?.run(insert))!
-            
             let insert2 = users.insert(name <- "Amazing7", email <- "360898864@qq.com")
             _ = (try! db?.run(insert2))!
             
