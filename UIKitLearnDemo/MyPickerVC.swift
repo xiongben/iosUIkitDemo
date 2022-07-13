@@ -46,6 +46,7 @@ class MyPickerVC : UIViewController  {
         mySwitch.onTintColor = UIColor.brown
         
         mySwitch.addTarget(self, action: #selector(self.onChange), for: .valueChanged)
+        mySwitch.center = CGPoint(x: fullSize.width * 0.5, y: fullSize.height * 0.5)
         self.view.addSubview(mySwitch)
     }
     
