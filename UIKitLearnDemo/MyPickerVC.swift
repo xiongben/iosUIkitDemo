@@ -17,7 +17,7 @@ class MyPickerVC : UIViewController  {
         
         self.view.backgroundColor = UIColor.white
         
-        let myPickerView = UIPickerView(frame: CGRect(x: 0, y: 70, width: fullSize.width, height: 150))
+        let myPickerView = UIPickerView(frame: CGRect(x: 0, y: 100, width: fullSize.width, height: 150))
         
         let myViewController = MyViewController()
         
@@ -27,6 +27,35 @@ class MyPickerVC : UIViewController  {
         myPickerView.dataSource = myViewController
         
         self.view.addSubview(myPickerView)
+        
+        // 开关
+        var mySwitch = UISwitch()
+        mySwitch.center = CGPoint(x: fullSize.width * 0.5, y: fullSize.height * 0.6)
+        self.view.addSubview(mySwitch)
+        
+        // 建立另一個 UISwitch
+        mySwitch = UISwitch()
+        
+        // 設置滑桿鈕的顏色
+        mySwitch.thumbTintColor = UIColor.orange
+        
+        // 設置未選取時( off )的外觀顏色
+        mySwitch.tintColor = UIColor.blue
+        
+        // 設置選取時( on )的外觀顏色
+        mySwitch.onTintColor = UIColor.brown
+        
+        mySwitch.addTarget(self, action: #selector(self.onChange), for: .valueChanged)
+        self.view.addSubview(mySwitch)
+    }
+    
+    @objc func onChange(_ sender: AnyObject) {
+        let tempSwitch = sender as! UISwitch
+        if tempSwitch.isOn {
+            self.view.backgroundColor = UIColor.black
+        } else {
+            self.view.backgroundColor = UIColor.white
+        }
     }
     
     
