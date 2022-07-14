@@ -48,6 +48,15 @@ class MyPickerVC : UIViewController  {
         mySwitch.addTarget(self, action: #selector(self.onChange), for: .valueChanged)
         mySwitch.center = CGPoint(x: fullSize.width * 0.5, y: fullSize.height * 0.5)
         self.view.addSubview(mySwitch)
+        
+        let mySegmentedControl = UISegmentedControl(items: ["早餐", "中餐", "晚餐"])
+        mySegmentedControl.tintColor = UIColor.black
+        mySegmentedControl.backgroundColor = UIColor.lightGray
+        mySegmentedControl.selectedSegmentIndex = 0
+        mySegmentedControl.addTarget(self, action: #selector(self.onChange2), for: .valueChanged)
+        mySegmentedControl.frame.size = CGSize(width: fullSize.width*0.5, height: 30)
+        mySegmentedControl.center = CGPoint(x: fullSize.width * 0.5, y: fullSize.height * 0.75)
+        self.view.addSubview(mySegmentedControl)
     }
     
     @objc func onChange(_ sender: AnyObject) {
@@ -57,6 +66,11 @@ class MyPickerVC : UIViewController  {
         } else {
             self.view.backgroundColor = UIColor.white
         }
+    }
+    
+    @objc func onChange2(_ sender: UISegmentedControl) {
+        print(sender.selectedSegmentIndex)
+        print(sender.titleForSegment(at: sender.selectedSegmentIndex)!)
     }
     
     
