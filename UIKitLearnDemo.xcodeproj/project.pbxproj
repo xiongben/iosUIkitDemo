@@ -12,6 +12,7 @@
 		840DE1A12879A8D300CBCE98 /* ScrollViewCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840DE1A02879A8D300CBCE98 /* ScrollViewCV.swift */; };
 		840DE1A42879C1C300CBCE98 /* ContactsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840DE1A32879C1C300CBCE98 /* ContactsUI.framework */; };
 		840DE1A8287AC7FF00CBCE98 /* ExAnimationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840DE1A7287AC7FF00CBCE98 /* ExAnimationVC.swift */; };
+		8415073128806C6E00EAAF45 /* TestPageCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8415073028806C6E00EAAF45 /* TestPageCV.swift */; };
 		8432B7182874659A008D838B /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432B7172874659A008D838B /* IntroViewController.swift */; };
 		8449E799287F132C00E21FC5 /* MyPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8449E798287F132C00E21FC5 /* MyPickerVC.swift */; };
 		844E101C287C2D410090E5A4 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 844E101B287C2D410090E5A4 /* SQLite */; };
@@ -53,6 +54,7 @@
 		840DE1A02879A8D300CBCE98 /* ScrollViewCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewCV.swift; sourceTree = "<group>"; };
 		840DE1A32879C1C300CBCE98 /* ContactsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ContactsUI.framework; path = System/Library/Frameworks/ContactsUI.framework; sourceTree = SDKROOT; };
 		840DE1A7287AC7FF00CBCE98 /* ExAnimationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExAnimationVC.swift; sourceTree = "<group>"; };
+		8415073028806C6E00EAAF45 /* TestPageCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPageCV.swift; sourceTree = "<group>"; };
 		8432B7172874659A008D838B /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		8449E798287F132C00E21FC5 /* MyPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPickerVC.swift; sourceTree = "<group>"; };
 		849B84C82869ECD4002DA7BA /* UIKitLearnDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitLearnDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,6 +148,7 @@
 				84BA2D26287863DB00CB0979 /* NSUserDefaultsVC.swift */,
 				84A83673287DBD82005A6A99 /* MyProgressVC.swift */,
 				8449E798287F132C00E21FC5 /* MyPickerVC.swift */,
+				8415073028806C6E00EAAF45 /* TestPageCV.swift */,
 				849B84D12869ECD4002DA7BA /* Main.storyboard */,
 				849B84D42869ECD4002DA7BA /* Assets.xcassets */,
 				849B84D62869ECD4002DA7BA /* LaunchScreen.storyboard */,
@@ -311,6 +314,7 @@
 				8449E799287F132C00E21FC5 /* MyPickerVC.swift in Sources */,
 				849B84D02869ECD4002DA7BA /* ViewController.swift in Sources */,
 				849B84CC2869ECD4002DA7BA /* AppDelegate.swift in Sources */,
+				8415073128806C6E00EAAF45 /* TestPageCV.swift in Sources */,
 				840DE1A12879A8D300CBCE98 /* ScrollViewCV.swift in Sources */,
 				84BA2D252878639300CB0979 /* UICollectionVC.swift in Sources */,
 				84BA2D29287872F500CB0979 /* ListBtnCV.swift in Sources */,
