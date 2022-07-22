@@ -11,7 +11,7 @@ class TableViewController : UIViewController, UITableViewDelegate, UITableViewDa
     
     let fullSize = UIScreen.main.bounds.size
     var info = [
-        ["林書豪","陳信安"],
+        ["林書豪","陳信安","jack", "rose"],
         ["陳偉殷","王建民","陳金鋒","林智勝"]
     ]
     
@@ -46,7 +46,7 @@ class TableViewController : UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return info[section].count
     }
-    
+
     // 必須實作的方法：每個 cell 要顯示的內容
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as UITableViewCell
@@ -62,7 +62,7 @@ class TableViewController : UIViewController, UITableViewDelegate, UITableViewDa
                 cell.accessoryType = .disclosureIndicator
             }
         }
-        
+
         // 顯示的內容
         if let myLabel = cell.textLabel {
             myLabel.text = "\(info[indexPath.section][indexPath.row])"
@@ -70,27 +70,41 @@ class TableViewController : UIViewController, UITableViewDelegate, UITableViewDa
 
         return cell
     }
-    
+
     // click item
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let name = info[indexPath.section][indexPath.row]
         print("选择的是\(name)")
     }
-    
+
     func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
         let name = info[indexPath.section][indexPath.row]
         print("按下的是 \(name) 的 detail")
     }
-    
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return info.count
     }
-    
+
     // 每個 section 的標題
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let title = section == 0 ? "籃球" : "棒球"
         return title
+    }
+    
+    func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        let title = section == 0 ? "第一个section的footer" : "第二个section的footer"
+        return title
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        let name = info[indexPath.section][indexPath.row]
+        print("按下的是 \(name) 的 detail")
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
     }
 
 }
