@@ -49,7 +49,7 @@ class TableViewController : UIViewController, UITableViewDelegate, UITableViewDa
 
     // 必須實作的方法：每個 cell 要顯示的內容
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MyTestCell
 //        // 設置 Accessory 按鈕樣式
 //        if indexPath.section == 1 {
 //            if indexPath.row == 0 {
@@ -67,6 +67,7 @@ class TableViewController : UIViewController, UITableViewDelegate, UITableViewDa
 //        if let myLabel = cell.textLabel {
 //            myLabel.text = "\(info[indexPath.section][indexPath.row])"
 //        }
+        cell.lbl.text = "\(info[indexPath.section][indexPath.row])"
 
         return cell
     }
@@ -135,22 +136,28 @@ class TableViewController : UIViewController, UITableViewDelegate, UITableViewDa
 
 class MyTestCell: UITableViewCell {
     
+    var lbl = UILabel.init()
+        
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        let myTextView = UITextView(frame: CGRect(x: 0, y: 0, width: 250, height: 60))
+        let myTextView = UILabel(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 60))
         myTextView.backgroundColor = UIColor.darkGray
         myTextView.textColor = UIColor.white
         myTextView.textAlignment = .left
         
-        myTextView.text = "this is a test"
-        myTextView.isEditable = true
-        myTextView.isSelectable = true
+        myTextView.text = "666"
+        
+        lbl = UILabel.init(frame: CGRect.zero)
+        lbl.frame = CGRect(x: 65, y: 10, width: UIScreen.main.bounds.size.width, height: 40)
+
         self.addSubview(myTextView)
+        self.addSubview(lbl)
     }
+    
     
     
    
