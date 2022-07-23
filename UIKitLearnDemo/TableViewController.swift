@@ -21,7 +21,7 @@ class TableViewController : UIViewController, UITableViewDelegate, UITableViewDa
         self.view.backgroundColor = UIColor.white
         
         let myTableView = UITableView(frame: CGRect(x: 0, y: 20, width: fullSize.width, height: fullSize.height - 20), style: .grouped)
-        myTableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        myTableView.register(MyTestCell.self, forCellReuseIdentifier: "Cell")
         myTableView.delegate = self
         myTableView.dataSource = self
         myTableView.separatorStyle = .singleLine
@@ -50,23 +50,23 @@ class TableViewController : UIViewController, UITableViewDelegate, UITableViewDa
     // 必須實作的方法：每個 cell 要顯示的內容
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as UITableViewCell
-        // 設置 Accessory 按鈕樣式
-        if indexPath.section == 1 {
-            if indexPath.row == 0 {
-                cell.accessoryType = .checkmark
-            } else if indexPath.row == 1 {
-                cell.accessoryType = .detailButton
-            } else if indexPath.row == 2 {
-                cell.accessoryType = .detailDisclosureButton
-            } else if indexPath.row == 3 {
-                cell.accessoryType = .disclosureIndicator
-            }
-        }
-
-        // 顯示的內容
-        if let myLabel = cell.textLabel {
-            myLabel.text = "\(info[indexPath.section][indexPath.row])"
-        }
+//        // 設置 Accessory 按鈕樣式
+//        if indexPath.section == 1 {
+//            if indexPath.row == 0 {
+//                cell.accessoryType = .checkmark
+//            } else if indexPath.row == 1 {
+//                cell.accessoryType = .detailButton
+//            } else if indexPath.row == 2 {
+//                cell.accessoryType = .detailDisclosureButton
+//            } else if indexPath.row == 3 {
+//                cell.accessoryType = .disclosureIndicator
+//            }
+//        }
+//
+//        // 顯示的內容
+//        if let myLabel = cell.textLabel {
+//            myLabel.text = "\(info[indexPath.section][indexPath.row])"
+//        }
 
         return cell
     }
@@ -98,14 +98,63 @@ class TableViewController : UIViewController, UITableViewDelegate, UITableViewDa
         return title
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        let name = info[indexPath.section][indexPath.row]
-        print("按下的是 \(name) 的 detail")
-    }
+//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//        let name = info[indexPath.section][indexPath.row]
+//        print("按下的是 \(name) 的 detail")
+//    }
     
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+//    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+//        return true
+//    }
+    
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         return true
     }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        print(sourceIndexPath)
+        print(destinationIndexPath)
+    }
+    
+//    func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+//        return ["第一个section", "第二个section", "第三个section"]
+//    }
+//
+//    func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
+//        print(title)
+//        print(index)
+//        return index
+//    }
 
 }
 
+
+class MyTestCell: UITableViewCell {
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+//        let myTextView = UITextView(frame: CGRect(x: 0, y: 0, width: 250, height: 60))
+//        myTextView.backgroundColor = UIColor.darkGray
+//        myTextView.textColor = UIColor.white
+//        myTextView.textAlignment = .left
+//        myTextView.text = "this is a test"
+//        myTextView.isEditable = true
+//        myTextView.isSelectable = true
+//        self.contentView.addSubview(myTextView)
+    }
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        let myTextView = UITextView(frame: CGRect(x: 0, y: 0, width: 250, height: 60))
+        myTextView.backgroundColor = UIColor.darkGray
+        myTextView.textColor = UIColor.white
+        myTextView.textAlignment = .left
+        myTextView.text = "this is a test"
+        myTextView.isEditable = true
+        myTextView.isSelectable = true
+        self.addSubview(myTextView)
+    }
+    
+    
+   
+}
