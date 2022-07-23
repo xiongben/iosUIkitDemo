@@ -98,6 +98,10 @@ class TableViewController : UIViewController, UITableViewDelegate, UITableViewDa
         return title
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
+    }
+    
 //    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
 //        let name = info[indexPath.section][indexPath.row]
 //        print("按下的是 \(name) 的 detail")
@@ -133,14 +137,6 @@ class MyTestCell: UITableViewCell {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-//        let myTextView = UITextView(frame: CGRect(x: 0, y: 0, width: 250, height: 60))
-//        myTextView.backgroundColor = UIColor.darkGray
-//        myTextView.textColor = UIColor.white
-//        myTextView.textAlignment = .left
-//        myTextView.text = "this is a test"
-//        myTextView.isEditable = true
-//        myTextView.isSelectable = true
-//        self.contentView.addSubview(myTextView)
     }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -149,6 +145,7 @@ class MyTestCell: UITableViewCell {
         myTextView.backgroundColor = UIColor.darkGray
         myTextView.textColor = UIColor.white
         myTextView.textAlignment = .left
+        
         myTextView.text = "this is a test"
         myTextView.isEditable = true
         myTextView.isSelectable = true
