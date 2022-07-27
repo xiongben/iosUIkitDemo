@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         label.textAlignment = .center
         self.view.addSubview(label)
         label.snp.makeConstraints{ (make) in
-            make.top.equalTo(100)
+            make.top.equalTo(200)
             make.centerX.equalTo(self.view)
         }
         label.font = UIFont.systemFont(ofSize: 30)
