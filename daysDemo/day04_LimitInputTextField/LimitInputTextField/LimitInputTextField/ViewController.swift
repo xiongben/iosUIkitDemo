@@ -28,13 +28,13 @@ class ViewController: UIViewController, UITextViewDelegate {
     func initInputField() {
         let naviFrame = self.navigationController?.navigationBar.frame
         print(naviFrame?.height ?? 0)
-        let statusBarFrame = view.window?.windowScene?.statusBarManager?.statusBarFrame
-        print("qq")
+        let statusBarFrame = UIApplication.shared.delegate?.window??.windowScene?.statusBarManager?.statusBarFrame
+//        print(UIApplication.shared.delegate?.window??.windowScene?.statusBarManager?.statusBarFrame.height)
         let avatarImgView = UIImageView(frame: CGRect(x: 0, y: (naviFrame?.height ?? 0) + (statusBarFrame?.height ?? 0) + 10, width: 70, height: 70))
         avatarImgView.image = UIImage(named: "avatar.jpeg")
         self.view.addSubview(avatarImgView)
         
-        limitedTextView = UITextView(frame: CGRect(x: 80, y: avatarImgView.frame.height, width: self.view.frame.width - 70 - 20, height: 300))
+        limitedTextView = UITextView(frame: CGRect(x: 80, y: (naviFrame?.height ?? 0) + (statusBarFrame?.height ?? 0) + 10, width: self.view.frame.width - 70 - 20, height: 300))
         self.view.addSubview(limitedTextView)
         limitedTextView.delegate = self
         limitedTextView.font = UIFont.systemFont(ofSize: 20)
