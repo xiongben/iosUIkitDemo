@@ -111,7 +111,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let dismissTimer = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false, block: { (timer) in
                 self.actionController.dismiss(animated: true, completion: nil)
             })
-        RunLoop.main.add(dismissTimer, forMode: .common)
+            RunLoop.main.add(dismissTimer, forMode: .common)
         })
     }
 }
