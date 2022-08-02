@@ -63,7 +63,8 @@ class ViewController: UIViewController {
     }
     
     @objc func goArticle() {
-        self.present(ArticleViewController(), animated: true)
+        self.navigationController?.pushViewController(ArticleViewController(), animated: true)
+//        self.present(ArticleViewController(), animated: true)
     }
     
     @objc func goIntro() {
