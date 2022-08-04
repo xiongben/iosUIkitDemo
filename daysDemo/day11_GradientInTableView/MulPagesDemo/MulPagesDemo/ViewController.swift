@@ -63,7 +63,9 @@ class ViewController: UIViewController {
     }
     
     @objc func goArticle() {
-        self.navigationController?.pushViewController(ArticleViewController(), animated: true)
+        let ArticleVC = ArticleViewController()
+        ArticleVC.data = "88888888"
+        self.navigationController?.pushViewController(ArticleVC, animated: true)
 //        self.present(ArticleViewController(), animated: true)
     }
     
