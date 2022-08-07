@@ -12,6 +12,7 @@ import AVKit
 class ViewController: UIViewController {
     
     let buttonHeight:CGFloat = 56
+    var playerController: AVPlayerViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +36,12 @@ class ViewController: UIViewController {
         signupButton.titleLabel?.font = UIFont.systemFont(ofSize: 20)
         signupButton.backgroundColor = UIColor(red: 42/255.0, green: 183/255.0, blue: 90/255.0, alpha: 1)
         self.view.addSubview(signupButton)
+        
+        playerController = AVPlayerViewController()
+        playerController.view.frame = view.frame
+        playerController.showsPlaybackControls = false
+        view.addSubview(playerController.view)
+        view.sendSubviewToBack(playerController.view)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -49,8 +56,6 @@ class ViewController: UIViewController {
         }
         print(path)
         let player = AVPlayer(url: URL(fileURLWithPath: path))
-        let playerController = AVPlayerViewController()
-
         playerController.player = player
         present(playerController, animated: true) {
             player.play()
