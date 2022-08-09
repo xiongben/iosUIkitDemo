@@ -16,6 +16,7 @@
 		849527B228A014960017318C /* TumMenuDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849527B128A014960017318C /* TumMenuDemoTests.swift */; };
 		849527BC28A014960017318C /* TumMenuDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849527BB28A014960017318C /* TumMenuDemoUITests.swift */; };
 		849527BE28A014960017318C /* TumMenuDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849527BD28A014960017318C /* TumMenuDemoUITestsLaunchTests.swift */; };
+		84A0A29828A29FAE00EB50AD /* CoreDataConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A0A29728A29FAE00EB50AD /* CoreDataConnect.swift */; };
 		84D49A8B28A154420070C16E /* TumMenuDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84D49A8928A154420070C16E /* TumMenuDemo.xcdatamodeld */; };
 		84D49A9228A158FC0070C16E /* Student+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D49A9028A158FC0070C16E /* Student+CoreDataClass.swift */; };
 		84D49A9328A158FC0070C16E /* Student+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D49A9128A158FC0070C16E /* Student+CoreDataProperties.swift */; };
@@ -52,6 +53,7 @@
 		849527B728A014960017318C /* TumMenuDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TumMenuDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		849527BB28A014960017318C /* TumMenuDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TumMenuDemoUITests.swift; sourceTree = "<group>"; };
 		849527BD28A014960017318C /* TumMenuDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TumMenuDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		84A0A29728A29FAE00EB50AD /* CoreDataConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataConnect.swift; sourceTree = "<group>"; };
 		84D49A8A28A154420070C16E /* TumMenuDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TumMenuDemo.xcdatamodel; sourceTree = "<group>"; };
 		84D49A9028A158FC0070C16E /* Student+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Student+CoreDataClass.swift"; sourceTree = "<group>"; };
 		84D49A9128A158FC0070C16E /* Student+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Student+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			children = (
 				8495279A28A014940017318C /* AppDelegate.swift */,
 				8495279C28A014940017318C /* SceneDelegate.swift */,
+				84A0A29728A29FAE00EB50AD /* CoreDataConnect.swift */,
 				8495279E28A014940017318C /* ViewController.swift */,
 				84D49A8928A154420070C16E /* TumMenuDemo.xcdatamodeld */,
 				849527A028A014940017318C /* Main.storyboard */,
@@ -267,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84A0A29828A29FAE00EB50AD /* CoreDataConnect.swift in Sources */,
 				84D49A9328A158FC0070C16E /* Student+CoreDataProperties.swift in Sources */,
 				84D49A8B28A154420070C16E /* TumMenuDemo.xcdatamodeld in Sources */,
 				8495279F28A014940017318C /* ViewController.swift in Sources */,

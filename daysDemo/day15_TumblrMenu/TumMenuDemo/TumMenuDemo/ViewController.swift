@@ -28,7 +28,63 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.navigationItem.title = "Todo List"
+        
+        // 存储示例部分
+        let myEntityName = "Student"
+        let myContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let coreDataConnect = CoreDataConnect(context: myContext)
+        
+        let myUserDefaults = UserDefaults.standard
+        var seq = 1
+        if let idSeq = myUserDefaults.object(forKey: "idSeq") as? Int {
+            seq = idSeq + 1
+        }
+        
+        // insert
+        let insertResult = coreDataConnect.insert(myEntityName, attributeInfo: [
+            "id" : "\(seq)",
+            "name" : "小強\(seq)",
+            "height" : "\(176.5 + Double(seq))"
+        ])
+        if insertResult {
+            print("新增資料成功")
+                        
+            myUserDefaults.set(seq, forKey: "idSeq")
+            myUserDefaults.synchronize()
+        }
+        
+        // select
+        let selectResult = coreDataConnect.retrieve(myEntityName, predicate: nil, sort: [["id":true]], limit: nil)
+        if let results = selectResult {
+            for result in results {
+                print("\(result.value(forKey: "id")!). \(result.value(forKey: "name")!)")
+                print("身高： \(result.value(forKey: "height")!)")
+            }
+        }
+        
+        // update
+        let updateId = seq - 1
+        var predicate = "id = \(updateId)"
+        let updateResult = coreDataConnect.update(
+            myEntityName,
+            predicate: predicate,
+            attributeInfo: ["height":"\(seq * 10)"])
+        if updateResult {
+            print("更新資料成功")
+        }
+        
+        // delete
+        let deleteID = seq - 2
+        predicate = "id = \(deleteID)"
+        let deleteResult = coreDataConnect.delete(
+            myEntityName, predicate: predicate)
+        if deleteResult {
+            print("刪除資料成功")
+        }
+        
+        
+        
+//        self.navigationItem.title = "Todo List"
 //        let rightBarItem = UIBarButtonItem(title: "+", style: .done, target: self, action: #selector(addTodoList))
     }
     
