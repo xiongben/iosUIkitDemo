@@ -11,8 +11,10 @@ import CoreData
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     let table = UITableView()
-    var dataSource = Array<String>()
-    let EntityName = "TodoList"
+    var dataSource = Array<Student>()
+    let EntityName = "Student"
+    var coreDataConnect: CoreDataConnect!
+    
     lazy var persistentContainer: NSPersistentContainer = {
 
         let container = NSPersistentContainer(name: "Your Model File Name")
@@ -32,7 +34,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // 存储示例部分
         let myEntityName = "Student"
         let myContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let coreDataConnect = CoreDataConnect(context: myContext)
+        coreDataConnect = CoreDataConnect(context: myContext)
         
         let myUserDefaults = UserDefaults.standard
         var seq = 1
@@ -84,8 +86,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         
         
-//        self.navigationItem.title = "Todo List"
-//        let rightBarItem = UIBarButtonItem(title: "+", style: .done, target: self, action: #selector(addTodoList))
+        self.navigationItem.title = "Todo List"
+        let rightBarItem = UIBarButtonItem(title: "+", style: .done, target: self, action: #selector(addTodoList))
+        self.navigationItem.rightBarButtonItem = rightBarItem
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -98,13 +101,51 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     @objc func addTodoList() {
-//        let alertController = UIAlertController(title: "Add New Todo Item", message: "", preferredStyle: .alert)
-//        let confirmAction = UIAlertAction(title: "Confirm", style: .default, handler: ({
-//            _ in
+        let alertController = UIAlertController(title: "Add New Todo Item", message: "", preferredStyle: .alert)
+        let confirmAction = UIAlertAction(title: "Confirm", style: .default, handler: ({ [self]
+            (_) in
+            let field = alertController.textFields![0].text
+            print(field as Any)
+            
+            let insertResult = self.coreDataConnect.insert(self.EntityName, attributeInfo: [
+                "id" : "22",
+                "name" : "\((field ?? "") as String)",
+                "height" : "188.9"
+            ])
+            if insertResult {
+                let selectResult = coreDataConnect.retrieve(EntityName, predicate: nil, sort: [["id":true]], limit: nil)
+                if let results = selectResult {
+                    dataSource = results as! [Student]
+                    for result in results {
+                        print("\(result.value(forKey: "id")!). \(result.value(forKey: "name")!)")
+                        print("身高： \(result.value(forKey: "height")!)")
+                    }
+                }
+                self.table.reloadData()
+            }
+            
+//            self.saveContent(content: field ?? "空的")
+            
+//            self.updateDataSource()
+//            self.table.reloadData()
+            
 //            if let field = alertController.textFields![0] as? UITextField {
 //                self.saveContent(content: field.text!)
+//                self.updateDataSource()
+//                self.table.reloadData()
 //            }
-//        }))
+        }))
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        alertController.addTextField { (textField) in
+            textField.placeholder = "Please input the todo Item"
+        }
+        
+        alertController.addAction(confirmAction)
+        alertController.addAction(cancelAction)
+        
+        self.present(alertController, animated: true, completion: nil)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -117,16 +158,36 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "coreDataReuseId")
-        cell.textLabel?.text = dataSource[indexPath.row]
+        cell.textLabel?.text = dataSource[indexPath.row].name
         return cell
     }
     
-    func getContext() -> NSManagedObjectContext {
+    func saveContent(content:String){
         let context = persistentContainer.viewContext
-        return context
+//        let entity = NSEntityDescription.entity(forEntityName: EntityName, in: context)
+        print(context as Any)
+//        let todoList = NSManagedObject(entity: entity!, insertInto: context)
+//
+//        todoList.setValue(content, forKey: "content")
+//
+//        do {
+//            try context.save()
+//        }catch{
+//            print(error)
+//        }
     }
     
-
+    func updateDataSource(){
+        let context = persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: EntityName)
+        do {
+            let searchResults = try context.fetch(fetchRequest)
+            print(searchResults as Any)
+            dataSource = searchResults as! [Student]
+        } catch  {
+            print(error)
+        }
+    }
 
 }
 
