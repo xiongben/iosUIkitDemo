@@ -123,17 +123,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 }
                 self.table.reloadData()
             }
-            
-//            self.saveContent(content: field ?? "空的")
-            
-//            self.updateDataSource()
-//            self.table.reloadData()
-            
-//            if let field = alertController.textFields![0] as? UITextField {
-//                self.saveContent(content: field.text!)
-//                self.updateDataSource()
-//                self.table.reloadData()
-//            }
         }))
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
@@ -162,32 +151,5 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
-    func saveContent(content:String){
-        let context = persistentContainer.viewContext
-//        let entity = NSEntityDescription.entity(forEntityName: EntityName, in: context)
-        print(context as Any)
-//        let todoList = NSManagedObject(entity: entity!, insertInto: context)
-//
-//        todoList.setValue(content, forKey: "content")
-//
-//        do {
-//            try context.save()
-//        }catch{
-//            print(error)
-//        }
-    }
-    
-    func updateDataSource(){
-        let context = persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: EntityName)
-        do {
-            let searchResults = try context.fetch(fetchRequest)
-            print(searchResults as Any)
-            dataSource = searchResults as! [Student]
-        } catch  {
-            print(error)
-        }
-    }
-
 }
 
