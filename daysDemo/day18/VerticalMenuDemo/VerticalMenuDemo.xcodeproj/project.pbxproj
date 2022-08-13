@@ -15,6 +15,8 @@
 		84DD283728A79FE9001EA342 /* VerticalMenuDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD283628A79FE9001EA342 /* VerticalMenuDemoTests.swift */; };
 		84DD284128A79FE9001EA342 /* VerticalMenuDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD284028A79FE9001EA342 /* VerticalMenuDemoUITests.swift */; };
 		84DD284328A79FE9001EA342 /* VerticalMenuDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD284228A79FE9001EA342 /* VerticalMenuDemoUITestsLaunchTests.swift */; };
+		84DD285028A7E361001EA342 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD284F28A7E361001EA342 /* MenuViewController.swift */; };
+		84DD285228A7E4F1001EA342 /* CustomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD285128A7E4F1001EA342 /* CustomTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		84DD283C28A79FE9001EA342 /* VerticalMenuDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VerticalMenuDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DD284028A79FE9001EA342 /* VerticalMenuDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalMenuDemoUITests.swift; sourceTree = "<group>"; };
 		84DD284228A79FE9001EA342 /* VerticalMenuDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalMenuDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		84DD284F28A7E361001EA342 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		84DD285128A7E4F1001EA342 /* CustomTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,8 @@
 				84DD281F28A79FE8001EA342 /* AppDelegate.swift */,
 				84DD282128A79FE8001EA342 /* SceneDelegate.swift */,
 				84DD282328A79FE8001EA342 /* ViewController.swift */,
+				84DD285128A7E4F1001EA342 /* CustomTransition.swift */,
+				84DD284F28A7E361001EA342 /* MenuViewController.swift */,
 				84DD282828A79FE9001EA342 /* Assets.xcassets */,
 				84DD282A28A79FE9001EA342 /* LaunchScreen.storyboard */,
 				84DD282D28A79FE9001EA342 /* Info.plist */,
@@ -256,7 +262,9 @@
 			files = (
 				84DD282428A79FE8001EA342 /* ViewController.swift in Sources */,
 				84DD282028A79FE8001EA342 /* AppDelegate.swift in Sources */,
+				84DD285228A7E4F1001EA342 /* CustomTransition.swift in Sources */,
 				84DD282228A79FE8001EA342 /* SceneDelegate.swift in Sources */,
+				84DD285028A7E361001EA342 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

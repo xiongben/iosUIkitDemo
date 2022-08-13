@@ -7,8 +7,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, CustomTransitionDelegate, UIViewControllerTransitioningDelegate {
+    
+    var transition = CustomTransition()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -20,8 +22,30 @@ class ViewController: UIViewController {
     }
     
     @objc func triggerMenu() {
-        
+        let menuViewController = MenuViewController()
+        menuViewController.transitioningDelegate = self
+        menuViewController.modalPresentationStyle = .custom
+        self.navigationController?.present(menuViewController, animated: true)
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.navigationType = .Dismiss
+        return transition
+    }
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.delegate = self
+        transition.navigationType = .Present
+        return transition
+    }
+    
+    func dismiss() {
+        dismiss(animated: true)
     }
 
 }
 
+public enum ViewControllerNavigationType:Int {
+    case Present = 0
+    case Dismiss = 1
+}
