@@ -15,7 +15,7 @@ class ViewController2: UIViewController {
         self.view.addSubview(imageView)
         self.navigationController?.isNavigationBarHidden = true
         print(self.revealViewController() as Any)
-//        self.view.addGestureRecognizer(self.revealViewController()!.panGestureRecognizer())
+        self.view.addGestureRecognizer(self.revealViewController()!.panGestureRecognizer())
     }
     
 //    override func viewDidAppear(_ animated: Bool) {
