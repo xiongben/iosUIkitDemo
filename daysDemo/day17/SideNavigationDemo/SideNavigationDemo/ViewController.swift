@@ -6,7 +6,7 @@
 //
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController2: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,9 +15,19 @@ class ViewController: UIViewController {
         self.view.addSubview(imageView)
         self.navigationController?.isNavigationBarHidden = true
         print(self.revealViewController() as Any)
-        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+//        self.view.addGestureRecognizer(self.revealViewController()!.panGestureRecognizer())
     }
     
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+//    }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        print(self.revealViewController() as Any)
+//    }
+//
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

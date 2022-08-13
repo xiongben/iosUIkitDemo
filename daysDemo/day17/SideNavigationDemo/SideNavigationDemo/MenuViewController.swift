@@ -48,7 +48,7 @@ class MenuViewController: SWRevealViewController,UITableViewDelegate,UITableView
 //        newViewController = ViewController()
         switch indexPath.row {
         case 0:
-            newViewController = ViewController()
+            newViewController = ViewController2()
         case 1:
             newViewController = SecondViewController()
         default:

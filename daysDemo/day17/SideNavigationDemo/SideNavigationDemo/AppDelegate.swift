@@ -16,8 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SWRevealViewControllerDel
         
         window = UIWindow(frame: UIScreen.main.bounds)
         let rearNavigationController = UINavigationController(rootViewController: MenuViewController())
-        let frontNavigationController = UINavigationController(rootViewController: ViewController())
+        let frontNavigationController = UINavigationController(rootViewController: ViewController2())
         let revealController = SWRevealViewController(rearViewController: rearNavigationController, frontViewController: frontNavigationController)
+        print(revealController as Any)
         revealController?.delegate = self
         
         window?.rootViewController = revealController
