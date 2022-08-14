@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController, CustomTransitionDelegate, UIViewControllerTransitioningDelegate {
     
@@ -19,6 +20,7 @@ class ViewController: UIViewController, CustomTransitionDelegate, UIViewControll
         self.view.addSubview(imgView)
         let menuButtonBar = UIBarButtonItem(title: "🎾", style: .plain, target: self, action: #selector(triggerMenu))
         self.navigationItem.leftBarButtonItem = menuButtonBar
+        self.getNetData()
     }
     
     @objc func triggerMenu() {
@@ -41,6 +43,19 @@ class ViewController: UIViewController, CustomTransitionDelegate, UIViewControll
     
     func dismiss() {
         dismiss(animated: true)
+    }
+    
+    func getNetData () {
+        let url = "https://api.caiyunapp.com/v2.5/QDmiwTuafsPwY047/121.6544,25.1552/realtime.json"
+        AF.request(url).response { response in
+            let jsonData = response.value
+            let dict = try? JSONSerialization.jsonObject(with: jsonData!!, options: .mutableContainers)
+            if(dict != nil){
+              let value : NSDictionary = dict as! NSDictionary
+                print(value["lang"] as! String)
+            }
+        }
+    
     }
 
 }
