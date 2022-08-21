@@ -16,9 +16,10 @@
 		842F415528B0CCED00F4F4EB /* WebDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F415428B0CCED00F4F4EB /* WebDemoTests.swift */; };
 		842F415F28B0CCED00F4F4EB /* WebDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F415E28B0CCED00F4F4EB /* WebDemoUITests.swift */; };
 		842F416128B0CCED00F4F4EB /* WebDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F416028B0CCED00F4F4EB /* WebDemoUITestsLaunchTests.swift */; };
-		842F419528B12BC100F4F4EB /* index.css in Resources */ = {isa = PBXBuildFile; fileRef = 842F419228B12BC000F4F4EB /* index.css */; };
-		842F419628B12BC100F4F4EB /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 842F419328B12BC000F4F4EB /* index.html */; };
-		842F419728B12BC100F4F4EB /* index.js in Resources */ = {isa = PBXBuildFile; fileRef = 842F419428B12BC100F4F4EB /* index.js */; };
+		842F420228B2385300F4F4EB /* js in Resources */ = {isa = PBXBuildFile; fileRef = 842F41FE28B2385300F4F4EB /* js */; };
+		842F420328B2385300F4F4EB /* css in Resources */ = {isa = PBXBuildFile; fileRef = 842F41FF28B2385300F4F4EB /* css */; };
+		842F420428B2385300F4F4EB /* favicon.ico in Resources */ = {isa = PBXBuildFile; fileRef = 842F420028B2385300F4F4EB /* favicon.ico */; };
+		842F420528B2385300F4F4EB /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 842F420128B2385300F4F4EB /* index.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,9 +53,10 @@
 		842F415A28B0CCED00F4F4EB /* WebDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		842F415E28B0CCED00F4F4EB /* WebDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebDemoUITests.swift; sourceTree = "<group>"; };
 		842F416028B0CCED00F4F4EB /* WebDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		842F419228B12BC000F4F4EB /* index.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = index.css; sourceTree = "<group>"; };
-		842F419328B12BC000F4F4EB /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
-		842F419428B12BC100F4F4EB /* index.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
+		842F41FE28B2385300F4F4EB /* js */ = {isa = PBXFileReference; lastKnownFileType = folder; path = js; sourceTree = "<group>"; };
+		842F41FF28B2385300F4F4EB /* css */ = {isa = PBXFileReference; lastKnownFileType = folder; path = css; sourceTree = "<group>"; };
+		842F420028B2385300F4F4EB /* favicon.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = favicon.ico; sourceTree = "<group>"; };
+		842F420128B2385300F4F4EB /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,9 +139,10 @@
 		842F416F28B1281A00F4F4EB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				842F419228B12BC000F4F4EB /* index.css */,
-				842F419328B12BC000F4F4EB /* index.html */,
-				842F419428B12BC100F4F4EB /* index.js */,
+				842F41FF28B2385300F4F4EB /* css */,
+				842F420028B2385300F4F4EB /* favicon.ico */,
+				842F420128B2385300F4F4EB /* index.html */,
+				842F41FE28B2385300F4F4EB /* js */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -248,12 +251,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				842F419628B12BC100F4F4EB /* index.html in Resources */,
-				842F419528B12BC100F4F4EB /* index.css in Resources */,
+				842F420528B2385300F4F4EB /* index.html in Resources */,
+				842F420328B2385300F4F4EB /* css in Resources */,
 				842F414A28B0CCED00F4F4EB /* LaunchScreen.storyboard in Resources */,
-				842F419728B12BC100F4F4EB /* index.js in Resources */,
+				842F420428B2385300F4F4EB /* favicon.ico in Resources */,
 				842F414728B0CCED00F4F4EB /* Assets.xcassets in Resources */,
 				842F414528B0CCEA00F4F4EB /* Main.storyboard in Resources */,
+				842F420228B2385300F4F4EB /* js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +464,7 @@
 				DEVELOPMENT_TEAM = VNTHT2GLVP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WebDemo/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "use camera";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "use microphone";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -491,6 +496,7 @@
 				DEVELOPMENT_TEAM = VNTHT2GLVP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WebDemo/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "use camera";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "use microphone";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

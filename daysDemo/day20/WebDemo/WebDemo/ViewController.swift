@@ -12,23 +12,26 @@ class ViewController: UIViewController, WKNavigationDelegate {
     
     let fullScreenSize = UIScreen.main.bounds.size
     var myWebView :WKWebView!
-
+   
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
-        myWebView = WKWebView(frame: CGRect(x: 0, y: 0, width: fullScreenSize.width, height: fullScreenSize.height))
+        let webConfiguration = WKWebViewConfiguration()
+        webConfiguration.preferences.setValue(true, forKey: "allowFileAccessFromFileURLs") // 解决web同源策略问题
+        myWebView = WKWebView(frame: CGRect(x: 0, y: 0, width: fullScreenSize.width, height: fullScreenSize.height),configuration: webConfiguration)
 
-        // 設置委任對象
+        
         myWebView.navigationDelegate = self
         
-        // 加入到畫面中
+        
         self.view.addSubview(myWebView)
-//        let url = URL(string:"https://liveness-check.coinsdo.com/#/kyc-about")
-//        let urlRequest = URLRequest(url: url!)
-//        myWebView.load(urlRequest)
+
         
         let myPath = Bundle.main.path(forResource: "index", ofType: "html")
         let myURL = URL(fileURLWithPath: myPath!)
+        
+    
         myWebView.loadFileURL(myURL, allowingReadAccessTo: Bundle.main.bundleURL)
     }
     
