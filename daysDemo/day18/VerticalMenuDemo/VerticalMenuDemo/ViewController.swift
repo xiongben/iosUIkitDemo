@@ -52,7 +52,8 @@ class ViewController: UIViewController, CustomTransitionDelegate, UIViewControll
             let dict = try? JSONSerialization.jsonObject(with: jsonData!!, options: .mutableContainers)
             if(dict != nil){
               let value : NSDictionary = dict as! NSDictionary
-                print(value["lang"] as! String)
+                print(value["result"]!)
+    
             }
         }
     
