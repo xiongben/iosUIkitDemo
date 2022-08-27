@@ -8,6 +8,7 @@
 import Foundation
 
 class Monster {
+    static let isTerrifying = true
     var town: Town?
     var name = "Monster"
     
@@ -17,5 +18,9 @@ class Monster {
         } else {
             print("\(name) hasn't found a town to terrorize yet...")
         }
+    }
+    
+    class var spookyNoise: String {
+        return "Grrrr"
     }
 }

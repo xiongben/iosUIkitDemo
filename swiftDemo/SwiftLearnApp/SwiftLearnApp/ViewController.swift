@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        var myTown = Town()
+        var myTown = Town(population: 1000, numberOfStoplights: 20, townSize: .small)
         myTown.changePopulation(20)
 //        myTown.printDescription()
 //        let genericMonster = Monster()
@@ -22,6 +22,9 @@ class ViewController: UIViewController {
         fredTheZombie.town = myTown
         fredTheZombie.terrorizeTown()
         fredTheZombie.town?.printDescription()
+        if Zombie.isTerrifying {
+            print("Run away!")
+        }
     }
 
 

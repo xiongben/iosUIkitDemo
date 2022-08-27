@@ -75,8 +75,8 @@ class ViewController: UIViewController, CAAnimationDelegate {
     }
     
     @objc func handelPanGesture(sender: UIPanGestureRecognizer) {
-        let velocity = sender.velocity(in: self.view)
-        let tranY = sender.translation(in: self.view).y
+        let velocity = sender.velocity(in: self.view)  // 拖拽手势的速度，velocity.y > 0表示从上到下移动
+        let tranY = sender.translation(in: self.view).y // 新位置的y坐标
         if lastY == 0 || tranY * lastY < 0{
             lastY = tranY
             lastTotalIndex = totalIndex
@@ -90,7 +90,6 @@ class ViewController: UIViewController, CAAnimationDelegate {
             }
             totalIndex += deltaOrigin
             lastTotalIndex = totalIndex
-//            print("time++ : index-> \(totalIndex)")
         }
         
 //        time -- down to up
