@@ -18,8 +18,7 @@ class ViewController: UIViewController {
 //        let genericMonster = Monster()
 //        genericMonster.town = myTown
 //        genericMonster.terrorizeTown()
-        let fredTheZombie = Zombie()
-        fredTheZombie.town = myTown
+        let fredTheZombie = Zombie(town: myTown, monsterName: "Fred")
         fredTheZombie.terrorizeTown()
         fredTheZombie.town?.printDescription()
         if Zombie.isTerrifying {

@@ -10,7 +10,12 @@ import Foundation
 class Monster {
     static let isTerrifying = true
     var town: Town?
-    var name = "Monster"
+    var name: String
+    
+    init(town: Town?, monsterName: String) {
+        self.town = town
+        name = monsterName
+    }
     
     func terrorizeTown() {
         if town != nil {
