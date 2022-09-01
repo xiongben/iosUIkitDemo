@@ -20,6 +20,7 @@
 		842F420328B2385300F4F4EB /* css in Resources */ = {isa = PBXBuildFile; fileRef = 842F41FF28B2385300F4F4EB /* css */; };
 		842F420428B2385300F4F4EB /* favicon.ico in Resources */ = {isa = PBXBuildFile; fileRef = 842F420028B2385300F4F4EB /* favicon.ico */; };
 		842F420528B2385300F4F4EB /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 842F420128B2385300F4F4EB /* index.html */; };
+		842FC92E28C0A7E600A9B8EC /* TestSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842FC92D28C0A7E600A9B8EC /* TestSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		842F41FF28B2385300F4F4EB /* css */ = {isa = PBXFileReference; lastKnownFileType = folder; path = css; sourceTree = "<group>"; };
 		842F420028B2385300F4F4EB /* favicon.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = favicon.ico; sourceTree = "<group>"; };
 		842F420128B2385300F4F4EB /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		842FC92D28C0A7E600A9B8EC /* TestSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TestSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				842FC92E28C0A7E600A9B8EC /* TestSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +90,7 @@
 		842F413128B0CCEA00F4F4EB = {
 			isa = PBXGroup;
 			children = (
+				842FC92D28C0A7E600A9B8EC /* TestSDK.framework */,
 				842F413C28B0CCEA00F4F4EB /* WebDemo */,
 				842F415328B0CCED00F4F4EB /* WebDemoTests */,
 				842F415D28B0CCED00F4F4EB /* WebDemoUITests */,
@@ -462,6 +466,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VNTHT2GLVP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WebDemo/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
@@ -472,7 +480,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -494,6 +502,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VNTHT2GLVP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WebDemo/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
@@ -504,7 +516,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
