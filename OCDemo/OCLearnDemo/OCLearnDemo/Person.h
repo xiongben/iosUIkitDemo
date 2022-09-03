@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
     int _age;
 }
 -(void)run;
+-(void)eatWith:(NSString *) food;
+-(int)addWith: (int)num1 and: (int)num2;
 @end
 
 NS_ASSUME_NONNULL_END
