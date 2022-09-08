@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		844AF8A028C9DEB900750CAB /* XBNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 844AF89F28C9DEB900750CAB /* XBNumber.m */; };
 		84A7F62628C2355F008A9061 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A7F62528C2355F008A9061 /* AppDelegate.m */; };
 		84A7F62928C2355F008A9061 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A7F62828C2355F008A9061 /* SceneDelegate.m */; };
 		84A7F62C28C2355F008A9061 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A7F62B28C2355F008A9061 /* ViewController.m */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		844AF89E28C9DEB900750CAB /* XBNumber.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBNumber.h; sourceTree = "<group>"; };
+		844AF89F28C9DEB900750CAB /* XBNumber.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBNumber.m; sourceTree = "<group>"; };
 		84A7F62128C2355F008A9061 /* OCLearnDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCLearnDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A7F62428C2355F008A9061 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84A7F62528C2355F008A9061 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -113,6 +116,8 @@
 				84A7F62828C2355F008A9061 /* SceneDelegate.m */,
 				84A7F62A28C2355F008A9061 /* ViewController.h */,
 				84A7F62B28C2355F008A9061 /* ViewController.m */,
+				844AF89E28C9DEB900750CAB /* XBNumber.h */,
+				844AF89F28C9DEB900750CAB /* XBNumber.m */,
 				84A7F65B28C23B7E008A9061 /* Person.h */,
 				84A7F65C28C23B7E008A9061 /* Person.m */,
 				84A7F62D28C2355F008A9061 /* Main.storyboard */,
@@ -273,6 +278,7 @@
 			files = (
 				84A7F62C28C2355F008A9061 /* ViewController.m in Sources */,
 				84A7F62628C2355F008A9061 /* AppDelegate.m in Sources */,
+				844AF8A028C9DEB900750CAB /* XBNumber.m in Sources */,
 				84A7F65D28C23B7E008A9061 /* Person.m in Sources */,
 				84A7F63728C23560008A9061 /* main.m in Sources */,
 				84A7F62928C2355F008A9061 /* SceneDelegate.m in Sources */,
