@@ -1,4 +1,5 @@
 import UIKit
+import Foundation
 
 // List Demo
 var testList: Array<String>
@@ -190,3 +191,96 @@ intStack.push(2)
 intStack.pop()
 intStack.pop()
 intStack.pop()
+
+class OneQuestion {
+    var question: String
+    var answer: String?
+    
+    init() {
+        question = "问题的题目"
+    }
+}
+
+let someQuestion = OneQuestion()
+someQuestion.answer = "答案随后"
+someQuestion.question
+
+let someQuestion2 = someQuestion
+someQuestion2.answer = "第二个答案"
+someQuestion.answer
+
+class SomeClass {
+    let numbers: [Int] = {
+        var temporaryNumbers = [Int]()
+        var isBlack = false
+        for i in 1...10 {
+            temporaryNumbers.append(i)
+        }
+        return temporaryNumbers
+    }()
+}
+
+let someClass1 = SomeClass()
+someClass1.numbers
+
+struct SomeNumbers {
+    var number: Int
+    init(_ n: Int) {
+        number = n
+    }
+}
+
+var someNunmber1 = SomeNumbers(9)
+someNunmber1.number
+
+var someNunmber2 = someNunmber1
+someNunmber2.number = 99
+someNunmber1.number
+
+
+class GameCharacter {
+    var name: String
+    init(name: String) {
+        self.name = name
+    }
+    convenience init(){
+        self.init(name: "[未命名]")
+    }
+}
+
+let oneChar = GameCharacter(name: "Kevin")
+oneChar.name
+let anotherChar = GameCharacter()
+anotherChar.name
+
+class Archer: GameCharacter {
+    var attackRange: Double
+    
+    init(name: String, attackRange: Double) {
+        self.attackRange = attackRange
+        super.init(name: name)
+    }
+    
+    override convenience init(name: String) {
+        self.init(name: name, attackRange: 1)
+    }
+}
+
+let oneArcher = Archer()
+oneArcher.attackRange
+
+class Hunter: Archer {
+    var hp = 100
+    var description: String {
+        return "\(name),hp是\(hp)"
+    }
+}
+
+let oneHunter = Hunter()
+oneHunter.description
+
+enum TemperatureUnit: Character {
+  case Kelvin = "K", Celsius = "C", Fahrenheit = "F"
+}
+
+let oneUnit = TemperatureUnit(rawValue: "F")
