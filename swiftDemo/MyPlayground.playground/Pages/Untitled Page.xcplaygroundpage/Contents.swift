@@ -284,3 +284,34 @@ enum TemperatureUnit: Character {
 }
 
 let oneUnit = TemperatureUnit(rawValue: "F")
+
+// 闭包
+
+let volunteerCounts = [1,3,44,2,45,24,78,23,11,33,98,66]
+func sortedArr(i: Int, j: Int) -> Bool {
+    return i < j
+}
+let sortedRes = volunteerCounts.sorted(by: sortedArr)
+
+let sortedRes2 = volunteerCounts.sorted(by: {
+    (i: Int, j: Int) -> Bool in
+    return i < j
+})
+
+
+func addTwoInts(number1: Int, number2: Int) -> Int {
+    return number1 + number2
+}
+
+addTwoInts(number1: 10, number2: 20)
+
+// 尾随闭包
+func addTestFn(num1: Int, num2: Int, add:(Int,Int)->Int) -> Int {
+    return add(num1, num2)
+}
+
+addTestFn(num1: 11, num2: 11){
+    (a: Int, b: Int) ->Int in
+    return a + b
+}
+
