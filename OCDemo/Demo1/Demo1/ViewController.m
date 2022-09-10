@@ -18,26 +18,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    UILabel *label = [[UILabel alloc] init];
+    label.frame = CGRectMake(0, 0, 100, 80);
+    label.backgroundColor = [UIColor yellowColor];
+    [self.view addSubview:label];
 }
 
-#pragma mark - 点击红色按钮
-- (IBAction)clickRedButton {
-    NSLog(@"%s", __func__);
-    self.label.textColor = UIColor.redColor;
-    self.label.text = @"this is a red desc!";
-}
-
-#pragma mark - 点击绿色按钮
-- (IBAction) clickGreenButton {
-    NSLog(@"%s", __func__);
-    self.label.textColor = [UIColor greenColor];
-}
-
-#pragma mark - 点击蓝色按钮
-- (IBAction) clickRlueButton {
-    NSLog(@"%s", __func__);
-    self.label.textColor = [UIColor blueColor];
-}
 
 
 @end
