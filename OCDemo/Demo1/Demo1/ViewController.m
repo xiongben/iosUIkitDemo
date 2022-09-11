@@ -44,15 +44,43 @@
 //
 //    [self.view addSubview:img1];
     
-//    路径加载图片
-    UIImageView *img2 = [[UIImageView alloc] init];
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"thumb" ofType:@"jpeg"];
-    img2.image = [UIImage imageWithContentsOfFile:path];
-    img2.frame = self.view.bounds;
-    [self.view addSubview:img2];
+////    路径加载图片
+//    UIImageView *img2 = [[UIImageView alloc] init];
+//    NSString *path = [[NSBundle mainBundle] pathForResource:@"thumb" ofType:@"jpeg"];
+//    img2.image = [UIImage imageWithContentsOfFile:path];
+//    img2.frame = self.view.bounds;
+//    [self.view addSubview:img2];
+    
+//    按钮
+    UIButton *btn1 = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn1.backgroundColor = [UIColor redColor];
+    btn1.frame = CGRectMake(100, 100, 170, 60);
+    
+    [btn1 setTitle:@"普通按钮" forState:UIControlStateNormal];
+    [btn1 setTitle:@"高亮按钮" forState:UIControlStateHighlighted];
+    
+    [btn1 setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
+    [btn1 setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
+    
+    UIImage *img3 = [UIImage imageNamed:@"01.jpeg"];
+    [img3 drawInRect:CGRectMake(0, 0, 20, 20)];
+    
+    [btn1 setBackgroundImage:img3 forState:UIControlStateNormal];
+    
+    [btn1 addTarget:self action:@selector(clickBtn:) forControlEvents:UIControlEventTouchUpInside];
+    
+//    [btn1 setImage:img3 forState:UIControlStateNormal];
+//    [btn1 setImage:[UIImage imageNamed:@"01.jpeg"] forState:UIControlStateHighlighted];
+    
+    [self.view addSubview:btn1];
 
      
     
+}
+
+-(void)clickBtn: (UIButton *) button {
+    button.enabled = NO;
+    NSLog(@"按钮点击了");
 }
 
 
