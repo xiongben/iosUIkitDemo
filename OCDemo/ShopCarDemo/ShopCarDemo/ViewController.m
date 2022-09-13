@@ -46,6 +46,22 @@
     shopView.backgroundColor = [UIColor greenColor];
     [self.shopCarView addSubview:shopView];
     
+//    图片
+    UIImageView *iconView = [[UIImageView alloc] init];
+    iconView.frame = CGRectMake(0, 0, width, width);
+    iconView.backgroundColor = [UIColor blueColor];
+    [shopView addSubview:iconView];
+    
+//    标题
+    UILabel *titleLabel = [[UILabel alloc] init];
+    titleLabel.frame = CGRectMake(0, width, width, height - width);
+    titleLabel.backgroundColor = [UIColor yellowColor];
+    [shopView addSubview:titleLabel];
+    
+//    设置数据
+    iconView.image = [UIImage imageNamed:@"p01"];
+    titleLabel.text = @"单肩包";
+    
     if(index == 5){
         button.enabled = NO;
     }
