@@ -17,6 +17,12 @@ NS_ASSUME_NONNULL_BEGIN
 /// 商品name
 @property (nonatomic, copy) NSString *name;
 
+- (instancetype) initWithIcon: (NSString *)icon name: (NSString *)name;
++ (instancetype) shopWithIcon: (NSString *)icon name: (NSString *)name;
+
+- (instancetype) initWithDict: (NSDictionary *)dict;
++ (instancetype) shopWithDict: (NSDictionary *)dict;
+
 @end
 
 NS_ASSUME_NONNULL_END

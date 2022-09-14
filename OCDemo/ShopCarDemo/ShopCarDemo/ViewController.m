@@ -33,9 +33,7 @@
         ];
         NSMutableArray *tempArr = [NSMutableArray array];
         for(NSDictionary *dict in self.dataArr) {
-            XBShop *xbshop = [[XBShop alloc] init];
-            xbshop.name = dict[@"name"];
-            xbshop.icon = dict[@"icon"];
+            XBShop *xbshop = [[XBShop alloc] initWithDict:dict];
             [tempArr addObject:xbshop];
         }
         self.dataArr = tempArr;
@@ -51,14 +49,6 @@
     
 //    NSLog(@"%@", _dataArr);
     
-//    self.dataArr = @[
-//        @{@"name": @"卡卡西", @"icon": @"p01"},
-//        @{@"name": @"佐助", @"icon": @"p02"},
-//        @{@"name": @"鸣人", @"icon": @"p03"},
-//        @{@"name": @"凯", @"icon": @"p04"},
-//        @{@"name": @"小李", @"icon": @"p05"},
-//        @{@"name": @"天天", @"icon": @"p06"},
-//    ];
 }
 
 /// 添加到购物车
@@ -96,7 +86,6 @@
     
     
 //    设置数据
-//    NSDictionary *dict = self.dataArr[index];
     XBShop *xbshop = self.dataArr[index];
     iconView.image = [UIImage imageNamed:xbshop.icon];
     titleLabel.text = xbshop.name;
