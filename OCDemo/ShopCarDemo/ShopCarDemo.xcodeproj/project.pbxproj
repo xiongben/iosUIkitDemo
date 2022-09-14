@@ -17,6 +17,7 @@
 		848F61C828D0BC5C0011AD2C /* ShopCarDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 848F61C728D0BC5C0011AD2C /* ShopCarDemoTests.m */; };
 		848F61D228D0BC5C0011AD2C /* ShopCarDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 848F61D128D0BC5C0011AD2C /* ShopCarDemoUITests.m */; };
 		848F61D428D0BC5C0011AD2C /* ShopCarDemoUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 848F61D328D0BC5C0011AD2C /* ShopCarDemoUITestsLaunchTests.m */; };
+		848F61E428D222BE0011AD2C /* XBShop.m in Sources */ = {isa = PBXBuildFile; fileRef = 848F61E328D222BE0011AD2C /* XBShop.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		848F61CD28D0BC5C0011AD2C /* ShopCarDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShopCarDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		848F61D128D0BC5C0011AD2C /* ShopCarDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShopCarDemoUITests.m; sourceTree = "<group>"; };
 		848F61D328D0BC5C0011AD2C /* ShopCarDemoUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShopCarDemoUITestsLaunchTests.m; sourceTree = "<group>"; };
+		848F61E228D222BE0011AD2C /* XBShop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBShop.h; sourceTree = "<group>"; };
+		848F61E328D222BE0011AD2C /* XBShop.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBShop.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				848F61AF28D0BC5B0011AD2C /* SceneDelegate.m */,
 				848F61B128D0BC5B0011AD2C /* ViewController.h */,
 				848F61B228D0BC5B0011AD2C /* ViewController.m */,
+				848F61E228D222BE0011AD2C /* XBShop.h */,
+				848F61E328D222BE0011AD2C /* XBShop.m */,
 				848F61B428D0BC5B0011AD2C /* Main.storyboard */,
 				848F61B728D0BC5C0011AD2C /* Assets.xcassets */,
 				848F61B928D0BC5C0011AD2C /* LaunchScreen.storyboard */,
@@ -270,6 +275,7 @@
 				848F61B328D0BC5B0011AD2C /* ViewController.m in Sources */,
 				848F61AD28D0BC5B0011AD2C /* AppDelegate.m in Sources */,
 				848F61BE28D0BC5C0011AD2C /* main.m in Sources */,
+				848F61E428D222BE0011AD2C /* XBShop.m in Sources */,
 				848F61B028D0BC5B0011AD2C /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

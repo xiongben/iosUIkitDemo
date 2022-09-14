@@ -6,6 +6,7 @@
 //
 
 #import "ViewController.h"
+#import "XBShop.h"
 
 @interface ViewController ()
 
@@ -14,15 +15,50 @@
 @property (weak, nonatomic) IBOutlet UIButton *addBtn;
 @property (weak, nonatomic) IBOutlet UIButton *deleteBtn;
 
+@property (nonatomic, strong) NSArray *dataArr;
+
 @end
 
 @implementation ViewController
+
+- (NSArray *)dataArr{
+    if(_dataArr == nil) {
+        self.dataArr = @[
+            @{@"name": @"卡卡西", @"icon": @"p01"},
+            @{@"name": @"佐助", @"icon": @"p02"},
+            @{@"name": @"鸣人", @"icon": @"p03"},
+            @{@"name": @"凯", @"icon": @"p04"},
+            @{@"name": @"小李", @"icon": @"p05"},
+            @{@"name": @"天天", @"icon": @"p06"},
+        ];
+        NSMutableArray *tempArr = [NSMutableArray array];
+        for(NSDictionary *dict in self.dataArr) {
+            XBShop *xbshop = [[XBShop alloc] init];
+            xbshop.name = dict[@"name"];
+            xbshop.icon = dict[@"icon"];
+            [tempArr addObject:xbshop];
+        }
+        self.dataArr = tempArr;
+    }
+    return _dataArr;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.index = 0;
     self.deleteBtn.enabled = NO;
+    
+//    NSLog(@"%@", _dataArr);
+    
+//    self.dataArr = @[
+//        @{@"name": @"卡卡西", @"icon": @"p01"},
+//        @{@"name": @"佐助", @"icon": @"p02"},
+//        @{@"name": @"鸣人", @"icon": @"p03"},
+//        @{@"name": @"凯", @"icon": @"p04"},
+//        @{@"name": @"小李", @"icon": @"p05"},
+//        @{@"name": @"天天", @"icon": @"p06"},
+//    ];
 }
 
 /// 添加到购物车
@@ -58,9 +94,12 @@
     titleLabel.backgroundColor = [UIColor yellowColor];
     [shopView addSubview:titleLabel];
     
+    
 //    设置数据
-    iconView.image = [UIImage imageNamed:@"p01"];
-    titleLabel.text = @"单肩包";
+//    NSDictionary *dict = self.dataArr[index];
+    XBShop *xbshop = self.dataArr[index];
+    iconView.image = [UIImage imageNamed:xbshop.icon];
+    titleLabel.text = xbshop.name;
     
     if(index == 5){
         button.enabled = NO;
