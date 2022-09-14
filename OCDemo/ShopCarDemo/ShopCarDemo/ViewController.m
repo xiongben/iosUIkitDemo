@@ -7,6 +7,7 @@
 
 #import "ViewController.h"
 #import "XBShop.h"
+#import "XBShopView.h"
 
 @interface ViewController ()
 
@@ -67,28 +68,30 @@
     CGFloat y = (vMargin + height) * (index / allCols);
     
     
-    UIView *shopView = [[UIView alloc] init];
-    shopView.frame = CGRectMake(x, y, 80, 100);
-    shopView.backgroundColor = [UIColor greenColor];
-    [self.shopCarView addSubview:shopView];
+//    UIView *shopView = [[UIView alloc] init];
+//    shopView.frame = CGRectMake(x, y, 80, 100);
+//    shopView.backgroundColor = [UIColor greenColor];
+//    [self.shopCarView addSubview:shopView];
+//
+////    图片
+//    UIImageView *iconView = [[UIImageView alloc] init];
+//    iconView.frame = CGRectMake(0, 0, width, width);
+//    iconView.backgroundColor = [UIColor blueColor];
+//    [shopView addSubview:iconView];
+//
+////    标题
+//    UILabel *titleLabel = [[UILabel alloc] init];
+//    titleLabel.frame = CGRectMake(0, width, width, height - width);
+//    titleLabel.backgroundColor = [UIColor yellowColor];
+//    [shopView addSubview:titleLabel];
+////    设置数据
+//    XBShop *xbshop = self.dataArr[index];
+//    iconView.image = [UIImage imageNamed:xbshop.icon];
+//    titleLabel.text = xbshop.name;
     
-//    图片
-    UIImageView *iconView = [[UIImageView alloc] init];
-    iconView.frame = CGRectMake(0, 0, width, width);
-    iconView.backgroundColor = [UIColor blueColor];
-    [shopView addSubview:iconView];
-    
-//    标题
-    UILabel *titleLabel = [[UILabel alloc] init];
-    titleLabel.frame = CGRectMake(0, width, width, height - width);
-    titleLabel.backgroundColor = [UIColor yellowColor];
-    [shopView addSubview:titleLabel];
-    
-    
-//    设置数据
-    XBShop *xbshop = self.dataArr[index];
-    iconView.image = [UIImage imageNamed:xbshop.icon];
-    titleLabel.text = xbshop.name;
+    XBShopView *xbshopView = [[XBShopView alloc] init];
+    xbshopView.frame = CGRectMake(x, y, width, height);
+    [self.shopCarView addSubview:xbshopView];
     
     if(index == 5){
         button.enabled = NO;
