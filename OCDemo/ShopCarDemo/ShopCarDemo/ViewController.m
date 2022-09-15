@@ -15,6 +15,7 @@
 @property (nonatomic, assign) NSInteger index;
 @property (weak, nonatomic) IBOutlet UIButton *addBtn;
 @property (weak, nonatomic) IBOutlet UIButton *deleteBtn;
+@property (weak, nonatomic) IBOutlet UILabel *showHUB;
 
 @property (nonatomic, strong) NSArray *dataArr;
 
@@ -102,6 +103,12 @@
         button.enabled = NO;
     }
     self.deleteBtn.enabled = YES;
+    
+//    HUB显示
+    if(index == 5) {
+        [self showWithInfo:@"火影小队人齐了！"];
+        
+    }
 }
 
 /// 从购物车删除
@@ -115,7 +122,19 @@
     
     if(index == 0) {
         self.deleteBtn.enabled = NO;
+        [self showWithInfo:@"火影小队没人啦！"];
     }
+}
+
+-(void)showWithInfo:(NSString *)info{
+    [UIView animateWithDuration:1.0 animations:^{
+        self.showHUB.text = info;
+        self.showHUB.alpha = 1;
+    } completion:^(BOOL finished) {
+        [UIView animateKeyframesWithDuration:1.0 delay:1.0 options:UIViewKeyframeAnimationOptionCalculationModeDiscrete animations:^{
+            self.showHUB.alpha = 0;
+        } completion:nil];
+    }];
 }
 
 @end
