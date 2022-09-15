@@ -6,6 +6,7 @@
 //
 
 #import "XBShopView.h"
+#import "XBShop.h"
 
 @interface XBShopView()
 
@@ -25,19 +26,7 @@
 */
 -(instancetype)init{
     if(self == [super init]) {
-    //    图片
-        UIImageView *iconView = [[UIImageView alloc] init];
-//        iconView.frame = CGRectMake(0, 0, width, width);
-        iconView.backgroundColor = [UIColor blueColor];
-        [self addSubview:iconView];
-        self.iconView = iconView;
-        
-    //    标题
-        UILabel *titleLabel = [[UILabel alloc] init];
-//        titleLabel.frame = CGRectMake(0, width, width, height - width);
-        titleLabel.backgroundColor = [UIColor yellowColor];
-        [self addSubview:titleLabel];
-        self.titleLabel = titleLabel;
+        [self setUP];
     }
     return self;
 }
@@ -50,6 +39,44 @@
     CGFloat height = self.frame.size.height;
     self.iconView.frame = CGRectMake(0, 0, width, width);
     self.titleLabel.frame = CGRectMake(0, width, width, height - width);
+}
+
+-(void)setIcon: (NSString *)icon {
+    self.iconView.image = [UIImage imageNamed:icon];
+}
+-(void)setName: (NSString *)name {
+    self.titleLabel.text = name;
+}
+-(void)setShop: (XBShop *)shop{
+    _shop = shop;
+    self.iconView.image = [UIImage imageNamed:shop.icon];
+    self.titleLabel.text = shop.name;
+}
+
+/// 初始化
+-(void)setUP{
+    //    图片
+        UIImageView *iconView = [[UIImageView alloc] init];
+        iconView.backgroundColor = [UIColor blueColor];
+        [self addSubview:iconView];
+        self.iconView = iconView;
+        
+    //    标题
+        UILabel *titleLabel = [[UILabel alloc] init];
+        titleLabel.backgroundColor = [UIColor yellowColor];
+        [self addSubview:titleLabel];
+        self.titleLabel = titleLabel;
+}
+
+-(instancetype)initWithShop:(XBShop *)shop{
+    if(self == [super init]){
+        [self setUP];
+        self.shop = shop;
+    }
+    return self;
+}
++(instancetype)shopViewWithShop:(XBShop *)shop{
+    return [[self alloc] initWithShop:shop];
 }
 
 @end

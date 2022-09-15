@@ -84,14 +84,19 @@
 //    titleLabel.frame = CGRectMake(0, width, width, height - width);
 //    titleLabel.backgroundColor = [UIColor yellowColor];
 //    [shopView addSubview:titleLabel];
-////    设置数据
-//    XBShop *xbshop = self.dataArr[index];
+//    设置数据
+    XBShop *xbshop = self.dataArr[index];
 //    iconView.image = [UIImage imageNamed:xbshop.icon];
 //    titleLabel.text = xbshop.name;
     
-    XBShopView *xbshopView = [[XBShopView alloc] init];
+//    XBShopView *xbshopView = [[XBShopView alloc] init];
+    XBShopView *xbshopView = [[XBShopView alloc] initWithShop:xbshop];
     xbshopView.frame = CGRectMake(x, y, width, height);
+//    [xbshopView setIcon:xbshop.icon];
+//    [xbshopView setName:xbshop.name];
     [self.shopCarView addSubview:xbshopView];
+    
+    
     
     if(index == 5){
         button.enabled = NO;
