@@ -6,6 +6,7 @@
 //
 
 #import "ViewController.h"
+#import "XBButton.h"
 
 @interface ViewController ()
 
@@ -18,6 +19,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+//    按钮布局
+    XBButton *btn5 = [XBButton buttonWithType:UIButtonTypeCustom];
+    btn5.frame = CGRectMake(100, 100, 170, 70);
+    btn5.backgroundColor = [UIColor purpleColor];
+    [btn5 setTitle:@"普通按钮" forState:UIControlStateNormal];
+    [btn5 setImage:[UIImage imageNamed:@"p01"] forState:UIControlStateNormal];
+    [self.view addSubview:btn5];
     
 //    UILabel *label = [[UILabel alloc] init];
 //    label.frame = CGRectMake(0, 0, 100, 80);

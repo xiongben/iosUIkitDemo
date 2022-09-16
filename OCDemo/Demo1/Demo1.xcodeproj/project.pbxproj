@@ -18,6 +18,7 @@
 		844AF8D428CB863800750CAB /* Demo1UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 844AF8D328CB863800750CAB /* Demo1UITests.m */; };
 		844AF8D628CB863800750CAB /* Demo1UITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 844AF8D528CB863800750CAB /* Demo1UITestsLaunchTests.m */; };
 		847BBF8928CDD5DF0067E546 /* thumb.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 847BBF8828CDD5DF0067E546 /* thumb.jpeg */; };
+		848F61F228D4B2A00011AD2C /* XBButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 848F61F128D4B2A00011AD2C /* XBButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		844AF8D328CB863800750CAB /* Demo1UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Demo1UITests.m; sourceTree = "<group>"; };
 		844AF8D528CB863800750CAB /* Demo1UITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Demo1UITestsLaunchTests.m; sourceTree = "<group>"; };
 		847BBF8828CDD5DF0067E546 /* thumb.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = thumb.jpeg; sourceTree = "<group>"; };
+		848F61F028D4B2A00011AD2C /* XBButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBButton.h; sourceTree = "<group>"; };
+		848F61F128D4B2A00011AD2C /* XBButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,8 @@
 				844AF8B128CB863700750CAB /* SceneDelegate.m */,
 				844AF8B328CB863700750CAB /* ViewController.h */,
 				844AF8B428CB863700750CAB /* ViewController.m */,
+				848F61F028D4B2A00011AD2C /* XBButton.h */,
+				848F61F128D4B2A00011AD2C /* XBButton.m */,
 				844AF8B628CB863700750CAB /* Main.storyboard */,
 				844AF8B928CB863800750CAB /* Assets.xcassets */,
 				844AF8BB28CB863800750CAB /* LaunchScreen.storyboard */,
@@ -279,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				844AF8B528CB863700750CAB /* ViewController.m in Sources */,
+				848F61F228D4B2A00011AD2C /* XBButton.m in Sources */,
 				844AF8AF28CB863700750CAB /* AppDelegate.m in Sources */,
 				844AF8C028CB863800750CAB /* main.m in Sources */,
 				844AF8B228CB863700750CAB /* SceneDelegate.m in Sources */,
