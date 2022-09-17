@@ -20,13 +20,31 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-//    按钮布局
-    XBButton *btn5 = [XBButton buttonWithType:UIButtonTypeCustom];
-    btn5.frame = CGRectMake(100, 100, 170, 70);
-    btn5.backgroundColor = [UIColor purpleColor];
-    [btn5 setTitle:@"普通按钮" forState:UIControlStateNormal];
-    [btn5 setImage:[UIImage imageNamed:@"p01"] forState:UIControlStateNormal];
-    [self.view addSubview:btn5];
+//    UIscrollView练习
+    UIScrollView *scrollView1 = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 60, 150, 150)];
+    scrollView1.backgroundColor = [UIColor yellowColor];
+    
+    UIImageView *img1 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"04.jpeg"]];
+    [scrollView1 addSubview:img1];
+    
+    scrollView1.contentSize = img1.frame.size;
+    
+    scrollView1.bounces = NO;
+    
+    scrollView1.contentOffset = CGPointMake(50, 50);
+    
+    scrollView1.delegate = self;
+    
+    [self.view addSubview:scrollView1];
+    
+   
+////    按钮布局
+//    XBButton *btn5 = [XBButton buttonWithType:UIButtonTypeCustom];
+//    btn5.frame = CGRectMake(100, 100, 170, 70);
+//    btn5.backgroundColor = [UIColor purpleColor];
+//    [btn5 setTitle:@"普通按钮" forState:UIControlStateNormal];
+//    [btn5 setImage:[UIImage imageNamed:@"p01"] forState:UIControlStateNormal];
+//    [self.view addSubview:btn5];
     
 //    UILabel *label = [[UILabel alloc] init];
 //    label.frame = CGRectMake(0, 0, 100, 80);
@@ -116,6 +134,12 @@
     
     
 }
+
+//滚动时调用的方法
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    NSLog(@"scrollViewDidScroll---------");
+}
+
 
 -(void)clickBtn: (UIButton *) button {
     button.enabled = NO;
