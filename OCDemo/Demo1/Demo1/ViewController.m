@@ -11,6 +11,7 @@
 @interface ViewController ()
 
 @property (nonatomic, weak)IBOutlet UILabel *label;
+@property (nonatomic, strong) UIScrollView *scrollView1;
 
 @end
 
@@ -21,21 +22,41 @@
     // Do any additional setup after loading the view.
     
 //    UIscrollView练习
-    UIScrollView *scrollView1 = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 60, 150, 150)];
-    scrollView1.backgroundColor = [UIColor yellowColor];
+    self.scrollView1 = [[UIScrollView alloc] initWithFrame:CGRectMake(30, 60, 150, 150)];
+    self.scrollView1.backgroundColor = [UIColor yellowColor];
     
-    UIImageView *img1 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"04.jpeg"]];
-    [scrollView1 addSubview:img1];
+    for(int i = 0; i < 5; i++){
+        NSString *imageName = [NSString stringWithFormat:@"p0%d", i+1];
+        NSLog(@"%@", imageName);
+        UIImageView *img1 = [[UIImageView alloc] initWithImage:[UIImage imageNamed: imageName]];
+        img1.frame = CGRectMake(i * self.scrollView1.frame.size.width, 0, self.scrollView1.frame.size.width, self.scrollView1.frame.size.width);
+        [self.scrollView1 addSubview:img1];
+    }
     
-    scrollView1.contentSize = img1.frame.size;
+    self.scrollView1.contentSize = CGSizeMake(150 * 5, 150);
+    self.scrollView1.pagingEnabled = YES;
+    self.scrollView1.delegate = self;
+    self.scrollView1.showsHorizontalScrollIndicator = NO;
     
-    scrollView1.bounces = NO;
     
-    scrollView1.contentOffset = CGPointMake(50, 50);
     
-    scrollView1.delegate = self;
+    [self.view addSubview: self.scrollView1];
     
-    [self.view addSubview:scrollView1];
+    UIPageControl *pageControl1 = [[UIPageControl alloc] initWithFrame:CGRectMake(30, 185, 200, 30)];
+    pageControl1.numberOfPages = 5;
+    pageControl1.currentPage = 0;
+    pageControl1.pageIndicatorTintColor = [UIColor greenColor];
+    pageControl1.currentPageIndicatorTintColor = [UIColor blueColor];
+//    pageControl1.backgroundColor = [UIColor brownColor];
+    [self.view addSubview:pageControl1];
+    
+    
+//    UITextField *field1 = [[UITextField alloc] initWithFrame:CGRectMake(0, 550, 150, 60)];
+//    field1.backgroundColor = [UIColor yellowColor];
+//
+//    [field1 addTarget:self action:@selector(tfEditingChange:) forControlEvents:UIControlEventEditingChanged];
+//
+//    [self.view addSubview:field1];
     
    
 ////    按钮布局
@@ -138,6 +159,10 @@
 //滚动时调用的方法
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     NSLog(@"scrollViewDidScroll---------");
+}
+
+-(void)tfEditingChange:(UITextField *)field{
+    NSLog(@"%@", field.text);
 }
 
 
