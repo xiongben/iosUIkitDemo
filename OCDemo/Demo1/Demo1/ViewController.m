@@ -11,7 +11,9 @@
 @interface ViewController ()
 
 @property (nonatomic, weak)IBOutlet UILabel *label;
-@property (nonatomic, strong) UIScrollView *scrollView1;
+@property (nonatomic, weak) UIScrollView *scrollView1;
+@property (nonatomic, weak) UIPageControl *pageControl1;
+@property (nonatomic, weak) NSTimer *timer;
 
 @end
 
@@ -22,7 +24,8 @@
     // Do any additional setup after loading the view.
     
 //    UIscrollView练习
-    self.scrollView1 = [[UIScrollView alloc] initWithFrame:CGRectMake(30, 60, 150, 150)];
+    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(30, 60, 150, 150)];
+    self.scrollView1 = scrollView;
     self.scrollView1.backgroundColor = [UIColor yellowColor];
     
     for(int i = 0; i < 5; i++){
@@ -42,13 +45,16 @@
     
     [self.view addSubview: self.scrollView1];
     
-    UIPageControl *pageControl1 = [[UIPageControl alloc] initWithFrame:CGRectMake(30, 185, 200, 30)];
-    pageControl1.numberOfPages = 5;
-    pageControl1.currentPage = 0;
-    pageControl1.pageIndicatorTintColor = [UIColor greenColor];
-    pageControl1.currentPageIndicatorTintColor = [UIColor blueColor];
+    UIPageControl *pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(30, 185, 200, 30)];
+    self.pageControl1 = pageControl;
+    self.pageControl1.numberOfPages = 5;
+    self.pageControl1.currentPage = 0;
+    self.pageControl1.pageIndicatorTintColor = [UIColor greenColor];
+    self.pageControl1.currentPageIndicatorTintColor = [UIColor blueColor];
 //    pageControl1.backgroundColor = [UIColor brownColor];
-    [self.view addSubview:pageControl1];
+    [self.view addSubview: self.pageControl1];
+    
+    [self startTimer];
     
     
 //    UITextField *field1 = [[UITextField alloc] initWithFrame:CGRectMake(0, 550, 150, 60)];
@@ -156,9 +162,46 @@
     
 }
 
+//定时器方法
+-(void)startTimer{
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(toNextPage) userInfo:nil repeats:YES];
+    
+    [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+}
+
+-(void)endTimer{
+    [self.timer invalidate];
+    self.timer = nil;
+}
+
 //滚动时调用的方法
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    NSLog(@"scrollViewDidScroll---------");
+    int page = scrollView.contentOffset.x / scrollView.frame.size.width + 0.5;
+    self.pageControl1.currentPage = page;
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+    [self startTimer];
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    int page = scrollView.contentOffset.x / scrollView.frame.size.width;
+    self.pageControl1.currentPage = page;
+}
+
+//用户开始拖拽时停止定时器，停止拖拽后开启定时器
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+    [self endTimer];
+}
+
+
+- (void) toNextPage{
+    NSInteger page = self.pageControl1.currentPage + 1;
+    if( page == 5) {
+        page = 0;
+    }
+    [self.scrollView1 setContentOffset:CGPointMake(page * self.scrollView1.frame.size.width, 0) animated:YES];
+    
 }
 
 -(void)tfEditingChange:(UITextField *)field{
