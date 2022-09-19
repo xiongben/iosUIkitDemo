@@ -56,6 +56,15 @@
     
     [self startTimer];
     
+    UIView *redView = [[UIView alloc] init];
+    redView.backgroundColor = [UIColor redColor];
+    CGFloat X = self.view.frame.size.width - 100;
+    CGFloat Y = self.view.frame.size.height - 100;
+    redView.frame = CGRectMake(X, Y, 100, 100);
+//    距离左边和顶部可伸缩
+    redView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin;
+    [self.view addSubview:redView];
+    
     
 //    UITextField *field1 = [[UITextField alloc] initWithFrame:CGRectMake(0, 550, 150, 60)];
 //    field1.backgroundColor = [UIColor yellowColor];
