@@ -6,14 +6,40 @@
 //
 
 #import "ViewController.h"
+#import "XBCarGroup.h"
+#import "XBCar.h"
 
 @interface ViewController ()
 
 @property(nonatomic, weak) UITableView *tableView1;
 
+@property (nonatomic, strong) NSArray *carGroups;
+
 @end
 
 @implementation ViewController
+
+- (NSArray *)carGroups{
+    if(!_carGroups){
+        XBCarGroup *group0 = [[XBCarGroup alloc] init];
+        group0.header = @"德系";
+        group0.footer = @"德系质量好ooo";
+        group0.cars = @[
+            [XBCar carWithName:@"Benz" icon:@"p01"],
+            [XBCar carWithName:@"BMW" icon:@"p02"],
+        ];
+        XBCarGroup *group1 = [[XBCarGroup alloc] init];
+        group1.header = @"日系";
+        group1.footer = @"日系价格便宜000";
+        group1.cars = @[
+            [XBCar carWithName:@"丰田" icon:@"p03"],
+            [XBCar carWithName:@"本田" icon:@"p04"],
+            [XBCar carWithName:@"马自达" icon:@"p05"],
+        ];
+        _carGroups = @[group0, group1];
+    }
+    return _carGroups;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -26,50 +52,35 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 2;
+    return self.carGroups.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    if(section == 0) {
-        return 2;
-    } else {
-        return 3;
-    }
+    XBCarGroup *group = self.carGroups[section];
+    return group.cars.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [[UITableViewCell alloc] init];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    if (indexPath.section == 0){
-        if(indexPath.row == 0) {
-            cell.textLabel.text = @"奔驰";
-            cell.imageView.image = [UIImage imageNamed: @"p01"];
-        } else if (indexPath.row == 1) {
-            cell.textLabel.text = @"宝马";
-            cell.imageView.image = [UIImage imageNamed: @"p02"];
-        }
-    } else if (indexPath.section == 1){
-        if(indexPath.row == 0) {
-            cell.textLabel.text = @"丰田";
-            cell.imageView.image = [UIImage imageNamed: @"p03"];
-        } else if (indexPath.row == 1) {
-            cell.textLabel.text = @"本田";
-            cell.imageView.image = [UIImage imageNamed: @"p04"];
-        }else if (indexPath.row == 2) {
-            cell.textLabel.text = @"马自达";
-            cell.imageView.image = [UIImage imageNamed: @"p05"];
-        }
-    }
+    
+    XBCarGroup *group = self.carGroups[indexPath.section];
+    XBCar *car = group.cars[indexPath.row];
+    
+    cell.textLabel.text = car.name;
+    cell.imageView.image = [UIImage imageNamed:car.icon];
+    
     return cell;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-    if(section == 0){
-        return @"德系";
-    } else {
-        return @"日系";
-    }
+    XBCarGroup *group = self.carGroups[section];
+    return group.header;
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section{
+    XBCarGroup *group = self.carGroups[section];
+    return group.footer;
+}
 
 @end
