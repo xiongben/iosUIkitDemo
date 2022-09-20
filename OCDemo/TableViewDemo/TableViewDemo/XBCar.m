@@ -16,4 +16,11 @@
     return car;
 }
 
++(instancetype)carWithDict:(NSDictionary *)dict{
+    XBCar *car = [[self alloc] init];
+    car.name = dict[@"name"];
+    car.icon = dict[@"icon"];
+    return car;
+}
+
 @end

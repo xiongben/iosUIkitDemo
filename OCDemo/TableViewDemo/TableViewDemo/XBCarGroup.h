@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, copy) NSString *footer;
 @property(nonatomic, strong) NSArray *cars;
 
++(instancetype)carGroupWithDict:(NSDictionary *)dict;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -21,22 +21,32 @@
 
 - (NSArray *)carGroups{
     if(!_carGroups){
-        XBCarGroup *group0 = [[XBCarGroup alloc] init];
-        group0.header = @"德系";
-        group0.footer = @"德系质量好ooo";
-        group0.cars = @[
-            [XBCar carWithName:@"Benz" icon:@"p01"],
-            [XBCar carWithName:@"BMW" icon:@"p02"],
-        ];
-        XBCarGroup *group1 = [[XBCarGroup alloc] init];
-        group1.header = @"日系";
-        group1.footer = @"日系价格便宜000";
-        group1.cars = @[
-            [XBCar carWithName:@"丰田" icon:@"p03"],
-            [XBCar carWithName:@"本田" icon:@"p04"],
-            [XBCar carWithName:@"马自达" icon:@"p05"],
-        ];
-        _carGroups = @[group0, group1];
+//        从plist文件加载数据
+        NSArray *dictArray = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Cars" ofType:@"plist"]];
+
+        NSMutableArray *temp = [NSMutableArray array];
+        for(NSDictionary *carGroupDict in dictArray) {
+            XBCarGroup *group = [XBCarGroup carGroupWithDict: carGroupDict];
+            [temp addObject:group];
+        }
+        _carGroups = temp;
+        
+//        XBCarGroup *group0 = [[XBCarGroup alloc] init];
+//        group0.header = @"德系";
+//        group0.footer = @"德系质量好ooo";
+//        group0.cars = @[
+//            [XBCar carWithName:@"Benz" icon:@"p01"],
+//            [XBCar carWithName:@"BMW" icon:@"p02"],
+//        ];
+//        XBCarGroup *group1 = [[XBCarGroup alloc] init];
+//        group1.header = @"日系";
+//        group1.footer = @"日系价格便宜000";
+//        group1.cars = @[
+//            [XBCar carWithName:@"丰田" icon:@"p03"],
+//            [XBCar carWithName:@"本田" icon:@"p04"],
+//            [XBCar carWithName:@"马自达" icon:@"p05"],
+//        ];
+//        _carGroups = @[group0, group1];
     }
     return _carGroups;
 }

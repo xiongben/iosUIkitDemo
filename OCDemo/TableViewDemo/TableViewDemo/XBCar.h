@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, copy) NSString *icon;
 
 +(instancetype)carWithName:(NSString *)name icon:(NSString *)icon;
++(instancetype)carWithDict:(NSDictionary *)dict;
 @end
 
 NS_ASSUME_NONNULL_END
