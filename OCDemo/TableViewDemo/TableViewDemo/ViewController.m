@@ -18,7 +18,7 @@
 @end
 
 @implementation ViewController
-
+NSString *ID = @"Car";
 - (NSArray *)carGroups{
     if(!_carGroups){
 //        从plist文件加载数据
@@ -65,7 +65,7 @@
     self.tableView1.tableHeaderView = [[UISwitch alloc] init];
     self.tableView1.tableFooterView = [[UISwitch alloc] init];
     
-    
+    [self.tableView1 registerClass:[UITableViewCell class] forCellReuseIdentifier:ID];
     [self.view addSubview: self.tableView1];
 }
 
@@ -81,18 +81,16 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
 //    优化
-    NSString *ID = @"Car";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    if(cell == nil){
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
-        cell.accessoryView = [[UISwitch alloc] init];
-        UIView *bg = [[UIView alloc] init];
-        bg.backgroundColor = [UIColor yellowColor];
-        cell.selectedBackgroundView = bg;
-    }
+//    if(cell == nil){
+//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
+//    }
 //    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 //    常见属性设置
-   
+    cell.accessoryView = [[UISwitch alloc] init];
+    UIView *bg = [[UIView alloc] init];
+    bg.backgroundColor = [UIColor yellowColor];
+    cell.selectedBackgroundView = bg;
     
     XBCarGroup *group = self.carGroups[indexPath.section];
     XBCar *car = group.cars[indexPath.row];
