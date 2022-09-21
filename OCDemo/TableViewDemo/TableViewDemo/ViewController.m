@@ -58,6 +58,14 @@
     self.tableView1 = tableView;
     self.tableView1.delegate = self;
     self.tableView1.dataSource = self;
+//    常见属性设置
+    self.tableView1.rowHeight = 80;
+    self.tableView1.sectionHeaderHeight = 80;
+    self.tableView1.separatorColor = [UIColor clearColor];
+    self.tableView1.tableHeaderView = [[UISwitch alloc] init];
+    self.tableView1.tableFooterView = [[UISwitch alloc] init];
+    
+    
     [self.view addSubview: self.tableView1];
 }
 
@@ -72,7 +80,12 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [[UITableViewCell alloc] init];
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+//    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+//    常见属性设置
+    cell.accessoryView = [[UISwitch alloc] init];
+    UIView *bg = [[UIView alloc] init];
+    bg.backgroundColor = [UIColor yellowColor];
+    cell.selectedBackgroundView = bg;
     
     XBCarGroup *group = self.carGroups[indexPath.section];
     XBCar *car = group.cars[indexPath.row];
@@ -91,6 +104,10 @@
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section{
     XBCarGroup *group = self.carGroups[section];
     return group.footer;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"choose:%ld",indexPath.row);
 }
 
 @end
