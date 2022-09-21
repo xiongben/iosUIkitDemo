@@ -79,13 +79,20 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [[UITableViewCell alloc] init];
+    
+//    优化
+    NSString *ID = @"Car";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    if(cell == nil){
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
+        cell.accessoryView = [[UISwitch alloc] init];
+        UIView *bg = [[UIView alloc] init];
+        bg.backgroundColor = [UIColor yellowColor];
+        cell.selectedBackgroundView = bg;
+    }
 //    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 //    常见属性设置
-    cell.accessoryView = [[UISwitch alloc] init];
-    UIView *bg = [[UIView alloc] init];
-    bg.backgroundColor = [UIColor yellowColor];
-    cell.selectedBackgroundView = bg;
+   
     
     XBCarGroup *group = self.carGroups[indexPath.section];
     XBCar *car = group.cars[indexPath.row];
