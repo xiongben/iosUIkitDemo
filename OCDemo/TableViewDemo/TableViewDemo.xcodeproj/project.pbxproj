@@ -20,6 +20,7 @@
 		84827B4128DA0405003B2D4B /* XBCarGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 84827B4028DA0405003B2D4B /* XBCarGroup.m */; };
 		84827B4428DA05BF003B2D4B /* XBCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 84827B4328DA05BF003B2D4B /* XBCar.m */; };
 		84827B4628DA096A003B2D4B /* Cars.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84827B4528DA096A003B2D4B /* Cars.plist */; };
+		84827B4928DB45B4003B2D4B /* TableViewControllerPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 84827B4828DB45B4003B2D4B /* TableViewControllerPage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		84827B4228DA05BF003B2D4B /* XBCar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBCar.h; sourceTree = "<group>"; };
 		84827B4328DA05BF003B2D4B /* XBCar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBCar.m; sourceTree = "<group>"; };
 		84827B4528DA096A003B2D4B /* Cars.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Cars.plist; sourceTree = "<group>"; };
+		84827B4728DB45B4003B2D4B /* TableViewControllerPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewControllerPage.h; sourceTree = "<group>"; };
+		84827B4828DB45B4003B2D4B /* TableViewControllerPage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewControllerPage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,8 @@
 				84827B0E28D9C213003B2D4B /* SceneDelegate.m */,
 				84827B1028D9C213003B2D4B /* ViewController.h */,
 				84827B1128D9C213003B2D4B /* ViewController.m */,
+				84827B4728DB45B4003B2D4B /* TableViewControllerPage.h */,
+				84827B4828DB45B4003B2D4B /* TableViewControllerPage.m */,
 				84827B3F28DA0405003B2D4B /* XBCarGroup.h */,
 				84827B4228DA05BF003B2D4B /* XBCar.h */,
 				84827B4328DA05BF003B2D4B /* XBCar.m */,
@@ -285,6 +290,7 @@
 				84827B0C28D9C213003B2D4B /* AppDelegate.m in Sources */,
 				84827B1D28D9C214003B2D4B /* main.m in Sources */,
 				84827B0F28D9C213003B2D4B /* SceneDelegate.m in Sources */,
+				84827B4928DB45B4003B2D4B /* TableViewControllerPage.m in Sources */,
 				84827B4128DA0405003B2D4B /* XBCarGroup.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

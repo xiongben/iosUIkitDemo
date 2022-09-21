@@ -8,6 +8,7 @@
 #import "ViewController.h"
 #import "XBCarGroup.h"
 #import "XBCar.h"
+#import "TableViewControllerPage.h"
 
 @interface ViewController ()
 
@@ -62,7 +63,15 @@ NSString *ID = @"Car";
     self.tableView1.rowHeight = 80;
     self.tableView1.sectionHeaderHeight = 80;
     self.tableView1.separatorColor = [UIColor clearColor];
-    self.tableView1.tableHeaderView = [[UISwitch alloc] init];
+    
+    UIButton *btn1 = [[UIButton alloc] init];
+    btn1.frame = CGRectMake(0, 10, 150, 50);
+    [btn1 setBackgroundColor:[UIColor yellowColor]];
+    [btn1 setTitle:@"to other page" forState:UIControlStateNormal];
+    [btn1 setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [btn1 addTarget:self action:@selector(toOtherPage) forControlEvents:UIControlEventTouchUpInside];
+    
+    self.tableView1.tableHeaderView = btn1;
     self.tableView1.tableFooterView = [[UISwitch alloc] init];
     
     [self.tableView1 registerClass:[UITableViewCell class] forCellReuseIdentifier:ID];
@@ -113,6 +122,10 @@ NSString *ID = @"Car";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"choose:%ld",indexPath.row);
+}
+
+- (void)toOtherPage{
+    [self.navigationController pushViewController:[[TableViewControllerPage alloc] init] animated:YES];
 }
 
 @end
