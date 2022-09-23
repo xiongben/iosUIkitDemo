@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>这是一个新闻标题
+Four Russian-occupied areas   
+Four Russian-occupied areas
+Four Russian-occupied areas</string>
+		<key>vip</key>
+		<true/>
+		<key>desc</key>
+		<string>This method is a convenience constructor for creating button objects with specific configurations. If you subclass UIButton, this method does not return an instance of your subclass. If you want to create an instance of a specific subclass, you must alloc/init the button directly. </string>
+		<key>price</key>
+		<string>12.0</string>
+		<key>number</key>
+		<string>500</string>
+		<key>detailPic</key>
+		<string>01.jpeg</string>
+		<key>userAvatar</key>
+		<string>avatar.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>这是一个新闻标题
+Four Russian-occupied areas   
+Four Russian-occupied areas
+Four Russian-occupied areas</string>
+		<key>vip</key>
+		<false/>
+		<key>desc</key>
+		<string>When creating a custom button—that is a button with the type UIButton.ButtonType.custom—the frame of the button is set to (0, 0, 0, 0) initially. Before adding the button to your interface, you should update the frame to a more appropriate value.</string>
+		<key>price</key>
+		<string>12.0</string>
+		<key>number</key>
+		<string>200</string>
+		<key>detailPic</key>
+		<string>01.jpeg</string>
+		<key>userAvatar</key>
+		<string>avatar.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>这是一个新闻标题
+Four Russian-occupied areas   
+Four Russian-occupied areas
+Four Russian-occupied areas</string>
+		<key>vip</key>
+		<false/>
+		<key>desc</key>
+		<string>The button type. See UIButton.ButtonType for the possible values.</string>
+		<key>price</key>
+		<string>12.0</string>
+		<key>number</key>
+		<string>500</string>
+		<key>detailPic</key>
+		<string>01.jpeg</string>
+		<key>userAvatar</key>
+		<string>avatar.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>这是一个新闻标题
+Four Russian-occupied areas   
+Four Russian-occupied areas
+Four Russian-occupied areas</string>
+		<key>vip</key>
+		<true/>
+		<key>desc</key>
+		<string>This method is a convenience constructor for creating button objects with specific configurations. If you subclass UIButton, this method does not return an instance of your subclass. If you want to create an instance of a specific subclass, you must alloc/init the button directly. </string>
+		<key>price</key>
+		<string>12.0</string>
+		<key>number</key>
+		<string>500</string>
+		<key>detailPic</key>
+		<string>01.jpeg</string>
+		<key>userAvatar</key>
+		<string>avatar.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>这是一个新闻标题
+Four Russian-occupied areas   
+Four Russian-occupied areas
+Four Russian-occupied areas</string>
+		<key>vip</key>
+		<true/>
+		<key>desc</key>
+		<string>This method is a convenience constructor for creating button objects with specific configurations. If you subclass UIButton, this method does not return an instance of your subclass. If you want to create an instance of a specific subclass, you must alloc/init the button directly. </string>
+		<key>price</key>
+		<string>12.0</string>
+		<key>number</key>
+		<string>500</string>
+		<key>detailPic</key>
+		<string>01.jpeg</string>
+		<key>userAvatar</key>
+		<string>avatar.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>这是一个新闻标题
+Four Russian-occupied areas   
+Four Russian-occupied areas
+Four Russian-occupied areas</string>
+		<key>vip</key>
+		<true/>
+		<key>desc</key>
+		<string>Creates and returns a new button of the specified type.</string>
+		<key>price</key>
+		<string>12.0</string>
+		<key>number</key>
+		<string>500</string>
+		<key>detailPic</key>
+		<string>01.jpeg</string>
+		<key>userAvatar</key>
+		<string>avatar.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>这是一个新闻标题
+Four Russian-occupied areas   
+Four Russian-occupied areas
+Four Russian-occupied areas</string>
+		<key>vip</key>
+		<true/>
+		<key>desc</key>
+		<string>根据目前的规定，我国职工的养老保险缴费需要公司和个人共同承担，其中公司需要承担20%，个人只需要承担8%。养老保险的缴费金额会根据缴费比例以及养老金计发基数来进行计算，通常职工社保缴纳比例最低为60%，最高为300%</string>
+		<key>price</key>
+		<string>12.0</string>
+		<key>number</key>
+		<string>500</string>
+		<key>detailPic</key>
+		<string>p01.png</string>
+		<key>userAvatar</key>
+		<string>avatar.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>这是一个新闻标题
+Four Russian-occupied areas   
+Four Russian-occupied areas
+Four Russian-occupied areas</string>
+		<key>vip</key>
+		<true/>
+		<key>desc</key>
+		<string>This method is a convenience constructor for creating button objects with specific configurations. If you subclass UIButton, this method does not return an instance of your subclass. If you want to create an instance of a specific subclass, you must alloc/init the button directly. </string>
+		<key>price</key>
+		<string>12.0</string>
+		<key>number</key>
+		<string>500</string>
+		<key>detailPic</key>
+		<string>01.jpeg</string>
+		<key>userAvatar</key>
+		<string>avatar.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>这是一个新闻标题
+Four Russian-occupied areas   
+Four Russian-occupied areas
+Four Russian-occupied areas</string>
+		<key>vip</key>
+		<true/>
+		<key>desc</key>
+		<string>今年6月，江苏省统计局发布了2021年平均工资数据，2021年江苏省城镇非私营单位就业人员年平均工资为115133元。其中，城镇非私营单位在岗职工年平均工资为117868元。2021年，城镇私营单位就业人员年平均工资为68868元</string>
+		<key>price</key>
+		<string>12.0</string>
+		<key>number</key>
+		<string>500</string>
+		<key>detailPic</key>
+		<string>01.jpeg</string>
+		<key>userAvatar</key>
+		<string>avatar.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>这是一个新闻标题
+Four Russian-occupied areas   
+Four Russian-occupied areas
+Four Russian-occupied areas</string>
+		<key>vip</key>
+		<true/>
+		<key>desc</key>
+		<string>This method is a convenience constructor for creating button objects with specific configurations. If you subclass UIButton, this method does not return an instance of your subclass. If you want to create an instance of a specific subclass, you must alloc/init the button directly. </string>
+		<key>price</key>
+		<string>12.0</string>
+		<key>number</key>
+		<string>500</string>
+		<key>detailPic</key>
+		<string>01.jpeg</string>
+		<key>userAvatar</key>
+		<string>avatar.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>这是一个新闻标题
+Four Russian-occupied areas   
+Four Russian-occupied areas
+Four Russian-occupied areas</string>
+		<key>vip</key>
+		<true/>
+		<key>desc</key>
+		<string>This method is a convenience constructor for creating button objects with specific configurations. If you subclass UIButton, this method does not return an instance of your subclass. If you want to create an instance of a specific subclass, you must alloc/init the button directly. </string>
+		<key>price</key>
+		<string>12.0</string>
+		<key>number</key>
+		<string>500</string>
+		<key>detailPic</key>
+		<string>01.jpeg</string>
+		<key>userAvatar</key>
+		<string>avatar.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>这是一个新闻标题
+Four Russian-occupied areas   
+Four Russian-occupied areas
+Four Russian-occupied areas</string>
+		<key>vip</key>
+		<true/>
+		<key>desc</key>
+		<string>This method is a convenience constructor for creating button objects with specific configurations. If you subclass UIButton, this method does not return an instance of your subclass. If you want to create an instance of a specific subclass, you must alloc/init the button directly. </string>
+		<key>price</key>
+		<string>12.0</string>
+		<key>number</key>
+		<string>500</string>
+		<key>detailPic</key>
+		<string>01.jpeg</string>
+		<key>userAvatar</key>
+		<string>avatar.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>这是一个新闻标题
+Four Russian-occupied areas   
+Four Russian-occupied areas
+Four Russian-occupied areas</string>
+		<key>vip</key>
+		<false/>
+		<key>desc</key>
+		<string>按照要求，养老金计发基数应该是上年度当地职工的平均工资，但是各个省具体采用的时候，可能会有所调整，这主要是考虑到当地的财政状况，以及养老金整体水平的高低。”9月22日，武汉科技大学金融证券研究所所长董登新在接受时代财经采访时表示，养老金计发基数就是缴纳养老保险的基数，每个地区缴纳养老保险的基数都不同，会参考当地上年度员工平均工资，然后再根据缴费比例来计算养老保险缴纳数额。“养老金计发基数和个人的工资有关，同时也影响到未来领取养老金的数额。”</string>
+		<key>price</key>
+		<string>12.0</string>
+		<key>number</key>
+		<string>500</string>
+		<key>detailPic</key>
+		<string>p03.png</string>
+		<key>userAvatar</key>
+		<string>avatar.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>这是一个新闻标题
+Four Russian-occupied areas   
+Four Russian-occupied areas
+Four Russian-occupied areas</string>
+		<key>vip</key>
+		<true/>
+		<key>desc</key>
+		<string>在南京市某国企工作的方圆（化名）给时代财经算了一笔账，以江苏省为例，当地职工基本养老保险缴费工资基数下限按4250元执行，缴费工资基数上限暂按21821元执行，其中在职人员的养老保险缴费比例按照8%计算，最低每月缴纳下限是4250*8%=340元，最高每月缴纳上限是21821*8%=1746元，“但是，灵活就业者缴纳的会多点，他们是20%比例，大概是每个月最少缴纳850元左右。”</string>
+		<key>price</key>
+		<string>12.0</string>
+		<key>number</key>
+		<string>500</string>
+		<key>detailPic</key>
+		<string>01.jpeg</string>
+		<key>userAvatar</key>
+		<string>avatar.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>这是一个新闻标题
+Four Russian-occupied areas   
+Four Russian-occupied areas
+Four Russian-occupied areas</string>
+		<key>vip</key>
+		<true/>
+		<key>desc</key>
+		<string>如果再加上职工医保（85元）和失业保险（21.25元），方圆算下来每个月最低要缴纳446.25元，“这是在职人员所要缴纳的养老保险。那么，像我爸那样已经退休的人，随着江苏省人均工资数据公布，部分退休人员养老金重新核算和调整也不远了。”</string>
+		<key>price</key>
+		<string>12.0</string>
+		<key>number</key>
+		<string>500</string>
+		<key>detailPic</key>
+		<string>01.jpeg</string>
+		<key>userAvatar</key>
+		<string>avatar.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>这是一个新闻标题
+Four Russian-occupied areas   
+Four Russian-occupied areas
+Four Russian-occupied areas</string>
+		<key>vip</key>
+		<true/>
+		<key>desc</key>
+		<string>董登新认为，目前我国的职工基本养老保险的退休金仍然是由地方政府来发放的，“各个地方政府要充分考虑财政状况，以及当地退休人员的平均养老金跟其他地区的差距，来对本地的计发基数进行调整。将来，职工基本养老保险能够全国统筹，那么全中国的退休人员的养老计划基数将会是大一统的，就不会由地方政府来自己掌控，自我调整。”</string>
+		<key>price</key>
+		<string>12.0</string>
+		<key>number</key>
+		<string>500</string>
+		<key>detailPic</key>
+		<string>01.jpeg</string>
+		<key>userAvatar</key>
+		<string>avatar.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>这是一个新闻标题
+Four Russian-occupied areas   
+Four Russian-occupied areas
+Four Russian-occupied areas</string>
+		<key>vip</key>
+		<true/>
+		<key>desc</key>
+		<string>This method is a convenience constructor for creating button objects with specific configurations. If you subclass UIButton, this method does not return an instance of your subclass. If you want to create an instance of a specific subclass, you must alloc/init the button directly. </string>
+		<key>price</key>
+		<string>12.0</string>
+		<key>number</key>
+		<string>500</string>
+		<key>detailPic</key>
+		<string>01.jpeg</string>
+		<key>userAvatar</key>
+		<string>avatar.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>这是一个新闻标题
+Four Russian-occupied areas   
+Four Russian-occupied areas
+Four Russian-occupied areas</string>
+		<key>vip</key>
+		<true/>
+		<key>desc</key>
+		<string>This method is a convenience constructor for creating button objects with specific configurations. If you subclass UIButton, this method does not return an instance of your subclass. If you want to create an instance of a specific subclass, you must alloc/init the button directly. </string>
+		<key>price</key>
+		<string>12.0</string>
+		<key>number</key>
+		<string>500</string>
+		<key>detailPic</key>
+		<string>01.jpeg</string>
+		<key>userAvatar</key>
+		<string>avatar.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>这是一个新闻标题
+Four Russian-occupied areas   
+Four Russian-occupied areas
+Four Russian-occupied areas</string>
+		<key>vip</key>
+		<true/>
+		<key>desc</key>
+		<string>This method is a convenience constructor for creating button objects with specific configurations. If you subclass UIButton, this method does not return an instance of your subclass. If you want to create an instance of a specific subclass, you must alloc/init the button directly. </string>
+		<key>price</key>
+		<string>12.0</string>
+		<key>number</key>
+		<string>500</string>
+		<key>detailPic</key>
+		<string>01.jpeg</string>
+		<key>userAvatar</key>
+		<string>avatar.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>这是一个新闻标题
+Four Russian-occupied areas   
+Four Russian-occupied areas
+Four Russian-occupied areas</string>
+		<key>vip</key>
+		<true/>
+		<key>desc</key>
+		<string>This method is a convenience constructor for creating button objects with specific configurations. If you subclass UIButton, this method does not return an instance of your subclass. If you want to create an instance of a specific subclass, you must alloc/init the button directly. </string>
+		<key>price</key>
+		<string>12.0</string>
+		<key>number</key>
+		<string>500</string>
+		<key>detailPic</key>
+		<string>01.jpeg</string>
+		<key>userAvatar</key>
+		<string>avatar.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>这是一个新闻标题
+Four Russian-occupied areas   
+Four Russian-occupied areas
+Four Russian-occupied areas</string>
+		<key>vip</key>
+		<true/>
+		<key>desc</key>
+		<string>This method is a convenience constructor for creating button objects with specific configurations. If you subclass UIButton, this method does not return an instance of your subclass. If you want to create an instance of a specific subclass, you must alloc/init the button directly. </string>
+		<key>price</key>
+		<string>12.0</string>
+		<key>number</key>
+		<string>500</string>
+		<key>detailPic</key>
+		<string>01.jpeg</string>
+		<key>userAvatar</key>
+		<string>avatar.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>这是一个新闻标题
+Four Russian-occupied areas   
+Four Russian-occupied areas
+Four Russian-occupied areas</string>
+		<key>vip</key>
+		<true/>
+		<key>desc</key>
+		<string>This method is a convenience constructor for creating button objects with specific configurations. If you subclass UIButton, this method does not return an instance of your subclass. If you want to create an instance of a specific subclass, you must alloc/init the button directly. </string>
+		<key>price</key>
+		<string>12.0</string>
+		<key>number</key>
+		<string>500</string>
+		<key>detailPic</key>
+		<string>01.jpeg</string>
+		<key>userAvatar</key>
+		<string>avatar.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>这是一个新闻标题
+Four Russian-occupied areas   
+Four Russian-occupied areas
+Four Russian-occupied areas</string>
+		<key>vip</key>
+		<true/>
+		<key>desc</key>
+		<string>This method is a convenience constructor for creating button objects with specific configurations. If you subclass UIButton, this method does not return an instance of your subclass. If you want to create an instance of a specific subclass, you must alloc/init the button directly. </string>
+		<key>price</key>
+		<string>12.0</string>
+		<key>number</key>
+		<string>500</string>
+		<key>detailPic</key>
+		<string>01.jpeg</string>
+		<key>userAvatar</key>
+		<string>avatar.png</string>
+	</dict>
+</array>
+</plist>
