@@ -7,6 +7,12 @@
 
 #import "XBNewsCell.h"
 
+@interface XBNewsCell ()
+
+@property(nonatomic, weak) UILabel *titleLabel;
+
+@end
+
 @implementation XBNewsCell
 
 - (void)awakeFromNib {
@@ -18,6 +24,17 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+    if(self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]){
+        
+    }
+    return self;
+}
+
+- (void)layoutSubviews{
+    [super layoutSubviews];
 }
 
 @end
