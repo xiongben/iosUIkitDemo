@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface XBNewsCell : UITableViewCell
 
 @property(nonatomic, strong) XBNews *newsData;
+- (void)SetData:(XBNews *)news;
 
 @end
 

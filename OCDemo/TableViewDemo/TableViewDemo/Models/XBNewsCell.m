@@ -36,19 +36,33 @@
 }
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+    CGFloat space = 10;
     if(self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]){
         UILabel *title = [[UILabel alloc] init];
         title.backgroundColor = [UIColor yellowColor];
         [self.contentView addSubview:title];
         self.titleLabel = title;
         
+//        [self.titleLabel makeConstraints:^(MASConstraintMaker *make) {
+//            make.top.equalTo(self.contentView.top).offset(space);
+//            make.left.equalTo(self.contentView.left).offset(space);
+//            make.size.equalTo(CGSizeMake(200, 50));
+//        }];
+        
         UILabel *desc = [[UILabel alloc] init];
         [self.contentView addSubview:desc];
         self.desc = desc;
+        self.desc.numberOfLines = 0;
+        [self.desc makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.contentView.top).offset(space);
+            make.left.equalTo(self.contentView.left).offset(space);
+            make.width.equalTo(self.contentView.width);
+            make.bottom.equalTo(self.contentView.bottom).offset(-space);
+        }];
+        
         
         UIImageView *userAvatarPic = [[UIImageView alloc] init];
         userAvatarPic.backgroundColor = [UIColor redColor];
-        userAvatarPic.frame = CGRectMake(0, 0, 50, 50);
         [self.contentView addSubview:userAvatarPic];
         self.userAvatar = userAvatarPic;
         
@@ -65,25 +79,20 @@
 
 - (void)layoutSubviews{
     [super layoutSubviews];
-    CGFloat space = 10;
-    
-//    self.userAvatar.frame = CGRectMake(0, 0, 50, 50);
-    
-    [self.titleLabel makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.superview.top).offset(space);
-        make.left.equalTo(self.superview.left).offset(space);
-        make.size.equalTo(CGSizeMake(200, 30));
-    }];
 }
 
-- (void)SetNewsData:(XBNews *)news{
-    NSLog(@"%@", news);
+- (void)updateConstraints{
+    [super updateConstraints];
+}
+
+- (void)SetData:(XBNews *)news{
+//    NSLog(@"%@", news.desc);
     _newsData = news;
     self.titleLabel.text = news.title;
     self.desc.text = news.desc;
-    self.detailPic.image = [UIImage imageNamed:news.detailPic];
-    self.vip.image = [UIImage imageNamed:news.vip];
-    self.userAvatar.image = [UIImage imageNamed:news.userAvatar];
+//    self.detailPic.image = [UIImage imageNamed:news.detailPic];
+//    self.vip.image = [UIImage imageNamed:news.vip];
+//    self.userAvatar.image = [UIImage imageNamed:news.userAvatar];
     
 }
 

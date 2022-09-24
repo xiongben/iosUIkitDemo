@@ -63,8 +63,7 @@ NSString *CellID = @"newsCell";
     XBNews *cellData = self.newsArr[indexPath.row];
 //    cell.textLabel.text = cellData.desc;
 //    cell.textLabel.numberOfLines = 0;
-    [cell setNewsData:cellData];
-//    cell.newsData = cellData;
+    [cell SetData:cellData];
     return cell;
 }
 
