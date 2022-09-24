@@ -7,6 +7,7 @@
 
 #import "TableViewControllerPage.h"
 #import "Models/XBNews.h"
+#import "Models/XBNewsCell.h"
 
 @interface TableViewControllerPage ()
 
@@ -17,6 +18,7 @@
 
 @implementation TableViewControllerPage
 
+NSString *CellID = @"newsCell";
 - (NSArray *)newsArr{
     if(!_newsArr){
         NSArray *fileArr = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"News" ofType:@"plist"]];
@@ -32,6 +34,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self.tableView registerClass:[XBNewsCell class] forCellReuseIdentifier:CellID];
 //    self.tableView.rowHeight = 80;
 
     // Uncomment the following line to preserve selection between presentations.
@@ -53,10 +57,14 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [[UITableViewCell alloc] init];
+    XBNewsCell *cell = [tableView dequeueReusableCellWithIdentifier:CellID];
+//    NSLog(@"%@", cell);
+//    UITableViewCell *cell = [[UITableViewCell alloc] init];
     XBNews *cellData = self.newsArr[indexPath.row];
-    cell.textLabel.text = cellData.desc;
-    cell.textLabel.numberOfLines = 0;
+//    cell.textLabel.text = cellData.desc;
+//    cell.textLabel.numberOfLines = 0;
+    [cell setNewsData:cellData];
+//    cell.newsData = cellData;
     return cell;
 }
 

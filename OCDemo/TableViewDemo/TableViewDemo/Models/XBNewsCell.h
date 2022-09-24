@@ -6,12 +6,13 @@
 //
 
 #import <UIKit/UIKit.h>
+@class XBNews;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface XBNewsCell : UITableViewCell
 
-
+@property(nonatomic, strong) XBNews *newsData;
 
 @end
 
