@@ -38,41 +38,60 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     CGFloat space = 10;
     if(self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]){
+        
+        UIImageView *userAvatarPic = [[UIImageView alloc] init];
+        userAvatarPic.image = [UIImage imageNamed:@"avatar"];
+        [self.contentView addSubview:userAvatarPic];
+        self.userAvatar = userAvatarPic;
+        [self.userAvatar makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.contentView.top).offset(space);
+            make.left.equalTo(self.contentView.left).offset(space);
+            make.height.equalTo(30);
+            make.width.equalTo(30);
+        }];
+        
         UILabel *title = [[UILabel alloc] init];
-        title.backgroundColor = [UIColor yellowColor];
         [self.contentView addSubview:title];
         self.titleLabel = title;
+        [self.titleLabel makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.contentView.top).offset(space);
+            make.left.equalTo(self.userAvatar.right).offset(space);
+            make.height.equalTo(30);
+            make.width.lessThanOrEqualTo(250);
+        }];
         
-//        [self.titleLabel makeConstraints:^(MASConstraintMaker *make) {
-//            make.top.equalTo(self.contentView.top).offset(space);
-//            make.left.equalTo(self.contentView.left).offset(space);
-//            make.size.equalTo(CGSizeMake(200, 50));
-//        }];
+        UIImageView *vip1 = [[UIImageView alloc] init];
+        vip1.image = [UIImage imageNamed:@"vip.png"];
+        [self.contentView addSubview:vip1];
+        self.vip = vip1;
+        [self.vip makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.contentView.top).offset(space);
+            make.left.equalTo(self.titleLabel.right).offset(5);
+            make.width.equalTo(30);
+            make.height.equalTo(30);
+    
+        }];
         
         UILabel *desc = [[UILabel alloc] init];
         [self.contentView addSubview:desc];
         self.desc = desc;
         self.desc.numberOfLines = 0;
         [self.desc makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.contentView.top).offset(space);
+            make.top.equalTo(self.userAvatar.bottom).offset(space);
             make.left.equalTo(self.contentView.left).offset(space);
-            make.width.equalTo(self.contentView.width);
-            make.bottom.equalTo(self.contentView.bottom).offset(-space);
+            make.right.equalTo(self.contentView.right).offset(-space);
         }];
-        
-        
-        UIImageView *userAvatarPic = [[UIImageView alloc] init];
-        userAvatarPic.backgroundColor = [UIColor redColor];
-        [self.contentView addSubview:userAvatarPic];
-        self.userAvatar = userAvatarPic;
-        
-        UIImageView *vip1 = [[UIImageView alloc] init];
-        [self.contentView addSubview:vip1];
-        self.vip = vip1;
         
         UIImageView *userDetailPic = [[UIImageView alloc] init];
         [self.contentView addSubview:userDetailPic];
         self.detailPic = userDetailPic;
+        [self.detailPic makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.desc.bottom).offset(space);
+            make.left.equalTo(self.contentView.left).offset(space);
+            make.width.equalTo(180);
+            make.height.equalTo(180);
+            make.bottom.equalTo(self.contentView.bottom).offset(-space);
+        }];
     }
     return self;
 }
@@ -90,7 +109,7 @@
     _newsData = news;
     self.titleLabel.text = news.title;
     self.desc.text = news.desc;
-//    self.detailPic.image = [UIImage imageNamed:news.detailPic];
+    self.detailPic.image = [UIImage imageNamed:news.detailPic];
 //    self.vip.image = [UIImage imageNamed:news.vip];
 //    self.userAvatar.image = [UIImage imageNamed:news.userAvatar];
     
