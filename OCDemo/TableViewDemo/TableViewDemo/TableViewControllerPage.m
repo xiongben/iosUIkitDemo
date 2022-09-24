@@ -8,6 +8,7 @@
 #import "TableViewControllerPage.h"
 #import "Models/XBNews.h"
 #import "Models/XBNewsCell.h"
+#import "Models/XBNewsXibCell.h"
 
 @interface TableViewControllerPage ()
 
@@ -35,7 +36,8 @@ NSString *CellID = @"newsCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.tableView registerClass:[XBNewsCell class] forCellReuseIdentifier:CellID];
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([XBNewsXibCell class]) bundle:nil] forCellReuseIdentifier:CellID];
+//    [self.tableView registerClass:[XBNewsCell class] forCellReuseIdentifier:CellID];
 //    self.tableView.rowHeight = 80;
 
     // Uncomment the following line to preserve selection between presentations.
@@ -57,13 +59,15 @@ NSString *CellID = @"newsCell";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    XBNewsCell *cell = [tableView dequeueReusableCellWithIdentifier:CellID];
+    XBNewsXibCell *cell = [tableView dequeueReusableCellWithIdentifier:CellID];
+//    XBNewsCell *cell = [tableView dequeueReusableCellWithIdentifier:CellID];
 //    NSLog(@"%@", cell);
 //    UITableViewCell *cell = [[UITableViewCell alloc] init];
+    //    cell.textLabel.text = cellData.desc;
+    //    cell.textLabel.numberOfLines = 0;
     XBNews *cellData = self.newsArr[indexPath.row];
-//    cell.textLabel.text = cellData.desc;
-//    cell.textLabel.numberOfLines = 0;
-    [cell SetData:cellData];
+//    [cell SetData:cellData];
+    cell.newsData = cellData;
     return cell;
 }
 

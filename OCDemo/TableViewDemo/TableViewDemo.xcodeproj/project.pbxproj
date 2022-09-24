@@ -34,6 +34,8 @@
 		84827B9C28DEFD48003B2D4B /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 84827B9028DEFD47003B2D4B /* MASConstraint.m */; };
 		84827B9D28DEFD48003B2D4B /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 84827B9228DEFD47003B2D4B /* MASViewConstraint.m */; };
 		84827B9E28DEFD48003B2D4B /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 84827B9328DEFD47003B2D4B /* MASViewAttribute.m */; };
+		84827BA328DF4AC5003B2D4B /* XBNewsXibCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84827BA128DF4AC5003B2D4B /* XBNewsXibCell.m */; };
+		84827BA428DF4AC5003B2D4B /* XBNewsXibCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84827BA228DF4AC5003B2D4B /* XBNewsXibCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +110,9 @@
 		84827B9128DEFD47003B2D4B /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		84827B9228DEFD47003B2D4B /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
 		84827B9328DEFD47003B2D4B /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
+		84827BA028DF4AC5003B2D4B /* XBNewsXibCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBNewsXibCell.h; sourceTree = "<group>"; };
+		84827BA128DF4AC5003B2D4B /* XBNewsXibCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBNewsXibCell.m; sourceTree = "<group>"; };
+		84827BA228DF4AC5003B2D4B /* XBNewsXibCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XBNewsXibCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +212,9 @@
 				84827B7428DDF071003B2D4B /* XBNews.m */,
 				84827B7628DDF0C8003B2D4B /* XBNewsCell.h */,
 				84827B7728DDF0C8003B2D4B /* XBNewsCell.m */,
+				84827BA028DF4AC5003B2D4B /* XBNewsXibCell.h */,
+				84827BA128DF4AC5003B2D4B /* XBNewsXibCell.m */,
+				84827BA228DF4AC5003B2D4B /* XBNewsXibCell.xib */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -346,6 +354,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84827BA428DF4AC5003B2D4B /* XBNewsXibCell.xib in Resources */,
 				84827B1A28D9C214003B2D4B /* LaunchScreen.storyboard in Resources */,
 				84827B4628DA096A003B2D4B /* Cars.plist in Resources */,
 				84827B1728D9C214003B2D4B /* Assets.xcassets in Resources */,
@@ -387,6 +396,7 @@
 				84827B9E28DEFD48003B2D4B /* MASViewAttribute.m in Sources */,
 				84827B9D28DEFD48003B2D4B /* MASViewConstraint.m in Sources */,
 				84827B7528DDF071003B2D4B /* XBNews.m in Sources */,
+				84827BA328DF4AC5003B2D4B /* XBNewsXibCell.m in Sources */,
 				84827B9828DEFD47003B2D4B /* MASConstraintMaker.m in Sources */,
 				84827B7828DDF0C8003B2D4B /* XBNewsCell.m in Sources */,
 				84827B9928DEFD47003B2D4B /* MASLayoutConstraint.m in Sources */,
