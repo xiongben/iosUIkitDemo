@@ -19,6 +19,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    NSLog(@"%@", XBTest);
+//    NSLog(@"%@", XBTest1);
+    
     Company *com1 = [[Company alloc] init];
     com1.name = @"Tencent";
     

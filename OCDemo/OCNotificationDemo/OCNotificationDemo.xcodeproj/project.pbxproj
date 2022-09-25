@@ -60,6 +60,7 @@
 		84C64A4A28E08862004563AD /* Company.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Company.m; sourceTree = "<group>"; };
 		84C64A4C28E08874004563AD /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		84C64A4D28E08874004563AD /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		84C64A4F28E0A169004563AD /* OCNotificationDemo.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCNotificationDemo.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +123,7 @@
 				84C64A2528E08771004563AD /* Info.plist */,
 				84C64A2628E08771004563AD /* main.m */,
 				84C64A4928E08862004563AD /* Company.h */,
+				84C64A4F28E0A169004563AD /* OCNotificationDemo.pch */,
 				84C64A4A28E08862004563AD /* Company.m */,
 				84C64A4C28E08874004563AD /* Person.h */,
 				84C64A4D28E08874004563AD /* Person.m */,
@@ -377,6 +379,8 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = OCNotificationDemo/OCNotificationDemo.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -433,6 +437,8 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = OCNotificationDemo/OCNotificationDemo.pch;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
