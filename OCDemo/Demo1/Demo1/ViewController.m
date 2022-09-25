@@ -23,6 +23,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+//    xib练习
+    UIView *shopView = [[[NSBundle mainBundle] loadNibNamed:@"XBShopView" owner:nil options:nil] lastObject];
+    shopView.frame = CGRectMake(30, 250, 80, 100);
+    [self.view addSubview:shopView];
+    
 //    UIscrollView练习
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(30, 60, 150, 150)];
     self.scrollView1 = scrollView;

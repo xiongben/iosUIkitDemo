@@ -19,6 +19,7 @@
 		844AF8D628CB863800750CAB /* Demo1UITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 844AF8D528CB863800750CAB /* Demo1UITestsLaunchTests.m */; };
 		847BBF8928CDD5DF0067E546 /* thumb.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 847BBF8828CDD5DF0067E546 /* thumb.jpeg */; };
 		848F61F228D4B2A00011AD2C /* XBButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 848F61F128D4B2A00011AD2C /* XBButton.m */; };
+		84C64A0728E00438004563AD /* XBShopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84C64A0628E00438004563AD /* XBShopView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		847BBF8828CDD5DF0067E546 /* thumb.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = thumb.jpeg; sourceTree = "<group>"; };
 		848F61F028D4B2A00011AD2C /* XBButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBButton.h; sourceTree = "<group>"; };
 		848F61F128D4B2A00011AD2C /* XBButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBButton.m; sourceTree = "<group>"; };
+		84C64A0628E00438004563AD /* XBShopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XBShopView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				844AF8B328CB863700750CAB /* ViewController.h */,
 				844AF8B428CB863700750CAB /* ViewController.m */,
 				848F61F028D4B2A00011AD2C /* XBButton.h */,
+				84C64A0628E00438004563AD /* XBShopView.xib */,
 				848F61F128D4B2A00011AD2C /* XBButton.m */,
 				844AF8B628CB863700750CAB /* Main.storyboard */,
 				844AF8B928CB863800750CAB /* Assets.xcassets */,
@@ -255,6 +258,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84C64A0728E00438004563AD /* XBShopView.xib in Resources */,
 				844AF8BD28CB863800750CAB /* LaunchScreen.storyboard in Resources */,
 				844AF8BA28CB863800750CAB /* Assets.xcassets in Resources */,
 				847BBF8928CDD5DF0067E546 /* thumb.jpeg in Resources */,
