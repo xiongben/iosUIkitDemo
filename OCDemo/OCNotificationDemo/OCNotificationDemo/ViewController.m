@@ -8,12 +8,40 @@
 #import "ViewController.h"
 #import "Company.h"
 #import "Person.h"
+#import "UserNotifications/UNUserNotificationCenter.h"
+
 
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
+- (IBAction)badgeValue:(UIButton *)sender {
+    UIApplication *app = [UIApplication sharedApplication];
+    
+//    UIUserNotificationSettings *notice = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeBadge categories:nil];
+//
+//    [app registerUserNotificationSettings:notice];
+//
+    UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+    [center requestAuthorizationWithOptions:UNAuthorizationOptionBadge completionHandler:^(BOOL granted, NSError * _Nullable error) {
+        NSLog(@"%@", error);
+    }];
+
+//    [UNUserNotificationCenter requestAuthorizationWithOptions:completionHandler:]
+//    [UNUserNotificationCenter setNotificationCategories:]
+    
+    [app setApplicationIconBadgeNumber:20];
+}
+- (IBAction)netState:(UIButton *)sender {
+    
+}
+- (IBAction)statusBar:(UIButton *)sender {
+    
+}
+- (IBAction)openUrl:(UIButton *)sender {
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
