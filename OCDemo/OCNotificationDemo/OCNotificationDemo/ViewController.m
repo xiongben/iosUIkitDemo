@@ -27,17 +27,16 @@
     [center requestAuthorizationWithOptions:UNAuthorizationOptionBadge completionHandler:^(BOOL granted, NSError * _Nullable error) {
         NSLog(@"%@", error);
     }];
-
-//    [UNUserNotificationCenter requestAuthorizationWithOptions:completionHandler:]
-//    [UNUserNotificationCenter setNotificationCategories:]
     
     [app setApplicationIconBadgeNumber:20];
 }
 - (IBAction)netState:(UIButton *)sender {
-    
+//    UIApplication *app = [UIApplication sharedApplication];
+//    app.networkActivityIndicatorVisible = YES;
 }
 - (IBAction)statusBar:(UIButton *)sender {
-    
+//    UIApplication *app = [UIApplication sharedApplication];
+//    app.statusBarHidden = YES;
 }
 - (IBAction)openUrl:(UIButton *)sender {
     
