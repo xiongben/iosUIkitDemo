@@ -42,9 +42,21 @@
     
 }
 
+- (void)loadView{
+    //    重写方法,替换初始的view
+        UIImageView *imageView1 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"p01"]];
+    imageView1.userInteractionEnabled = YES;
+    self.view = imageView1;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    UIButton *btn3 = [UIButton buttonWithType:UIButtonTypeContactAdd];
+    btn3.frame = CGRectMake(50, 40, 50, 50);
+    [self.view addSubview:btn3];
+    
     
     NSLog(@"%@", XBTest);
 //    NSLog(@"%@", XBTest1);
