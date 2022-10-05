@@ -16,6 +16,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+//    navigation demo
     UILabel *text1 = [[UILabel alloc] init];
     text1.text = @"hello world!";
     text1.frame = CGRectMake(100, 100, 100, 30);
