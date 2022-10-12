@@ -3,5 +3,7 @@
     <pages>
         <page name='page1'/>
         <page name='page2'/>
+        <page name='page3'/>
+        <page name='闭包'/>
     </pages>
 </playground>
