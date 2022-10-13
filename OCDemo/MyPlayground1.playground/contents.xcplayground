@@ -3,7 +3,8 @@
     <pages>
         <page name='page1'/>
         <page name='page2'/>
-        <page name='page3'/>
+        <page name='class'/>
         <page name='闭包'/>
+        <page name='属性'/>
     </pages>
 </playground>

@@ -14,3 +14,32 @@ class_getInstanceSize(Point.self)
 
 // 方法不占用对象内存，方法的本质是函数
 // 方法函数都放在代码段
+
+
+//下标
+class Point2 {
+    var x = 0.0, y = 0.0
+    subscript(index: Int) -> Double{
+        set{
+            if index == 0 {
+                x = newValue
+            } else if index == 1 {
+                y = newValue
+            }
+        }
+        get{
+            if index == 0 {
+                return x
+            } else if index == 1 {
+                return y
+            }
+            return 0
+        }
+    }
+}
+
+var p2 = Point2()
+p2[0] = 11.1
+p2[1] = 22.2
+p2.x
+p2.y
