@@ -6,5 +6,6 @@
         <page name='class'/>
         <page name='闭包'/>
         <page name='属性'/>
+        <page name='protocol'/>
     </pages>
 </playground>
