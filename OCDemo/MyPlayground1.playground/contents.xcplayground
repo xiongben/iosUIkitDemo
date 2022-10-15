@@ -7,5 +7,7 @@
         <page name='闭包'/>
         <page name='属性'/>
         <page name='protocol'/>
+        <page name='error'/>
+        <page name='Generics'/>
     </pages>
 </playground>
