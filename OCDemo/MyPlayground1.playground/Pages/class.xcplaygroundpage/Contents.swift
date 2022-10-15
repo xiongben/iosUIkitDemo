@@ -43,3 +43,39 @@ p2[0] = 11.1
 p2[1] = 22.2
 p2.x
 p2.y
+
+//两段初始化
+
+class Person {
+    var age:Int
+    init(age:Int){
+        self.age = age
+    }
+}
+
+class Student : Person {
+    var score: Int
+    
+    override init(age: Int) {
+        self.score = 10
+        super.init(age: age)
+    }
+}
+
+class Student2 : Person {
+    var score: Int
+    
+    init(age: Int, score: Int){
+        self.score = score
+        super.init(age: age)
+        self.score = 200
+    }
+    
+    convenience init() {
+        self.init(age: 22, score: 100)
+        self.age = 10
+    }
+}
+
+var stu1 = Student2()
+stu1.score
