@@ -29,3 +29,17 @@ class Test1 : TestPro {
 
 var t1 = Test1()
 t1.test1()
+
+
+
+//将类结构的方法赋值给变量
+struct Person {
+    var age: Int
+    func run(_ v: Int) {
+        print("func run", age, v)
+    }
+}
+
+var fn1 = Person.run
+var fn2 = fn1(Person(age:10))
+fn2(20)

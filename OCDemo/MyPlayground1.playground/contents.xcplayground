@@ -10,5 +10,6 @@
         <page name='error'/>
         <page name='Generics'/>
         <page name='Extend'/>
+        <page name='Point'/>
     </pages>
 </playground>
