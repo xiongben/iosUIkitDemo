@@ -9,5 +9,6 @@
         <page name='protocol'/>
         <page name='error'/>
         <page name='Generics'/>
+        <page name='Extend'/>
     </pages>
 </playground>

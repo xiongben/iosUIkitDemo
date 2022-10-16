@@ -20,3 +20,9 @@ var ss = StringStack()
 
 //不透明类型，只能返回一种类型
 
+
+//可选项的本质
+var age: Int? = 10
+var age0: Optional<Int> = Optional<Int>.some(10)
+var age1 = Optional(10)
+var age2 = Optional<Int>.none
