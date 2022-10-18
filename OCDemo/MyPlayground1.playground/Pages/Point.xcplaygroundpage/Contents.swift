@@ -21,3 +21,20 @@ ptr2.deallocate()
 
 //指针之间的转换
 
+func greaterThan(_ num: Int) -> (Int) -> Bool {
+//    return {
+//        (i: Int) -> Bool in i > num
+//    }
+    {$0 > num}
+}
+
+var fn = greaterThan(5)
+print(fn(6))
+
+func test2(){
+    print(#file,#line,#function)
+    if #available(iOS 10, *) {
+        print("5555")
+    }
+}
+test2()
