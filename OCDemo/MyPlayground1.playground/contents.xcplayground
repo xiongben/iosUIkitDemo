@@ -12,5 +12,6 @@
         <page name='Extend'/>
         <page name='Point'/>
         <page name='new1'/>
+        <page name='kvcDemo'/>
     </pages>
 </playground>
