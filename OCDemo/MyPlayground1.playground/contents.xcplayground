@@ -14,5 +14,6 @@
         <page name='new1'/>
         <page name='kvcDemo'/>
         <page name='functionCode'/>
+        <page name='Functor'/>
     </pages>
 </playground>
