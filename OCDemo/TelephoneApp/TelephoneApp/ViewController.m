@@ -11,7 +11,7 @@
 @property(weak, nonatomic) UITextField *accountNumInput;
 @property(weak, nonatomic) UITextField *accountPwdInput;
 @property(weak, nonatomic) UISwitch *pwdSwitch;
-@property(weak, nonatomic) UISwitch *autoLogin;
+@property(weak, nonatomic) UISwitch *loginSwitch;
 @property(weak, nonatomic) UIButton *loginBtn;
 @end
 
@@ -51,15 +51,19 @@
     rememberPwd.text = @"记住密码";
     
     UISwitch *pwdSwitch = [[UISwitch alloc] initWithFrame:CGRectMake(110, 10, 80, 40)];
+    self.pwdSwitch = pwdSwitch;
+    [self.pwdSwitch addTarget:self action:@selector(switchDidChange) forControlEvents:UIControlEventValueChanged];
     
     UILabel *autoLogin = [[UILabel alloc] initWithFrame: CGRectMake(200, 10, 80, 40)];
     autoLogin.text = @"自动登录";
     
     UISwitch *loginSwitch = [[UISwitch alloc] initWithFrame:CGRectMake(290, 10, 80, 40)];
+    self.loginSwitch = loginSwitch;
+    
     [view1 addSubview:rememberPwd];
     [view1 addSubview:autoLogin];
-    [view1 addSubview:pwdSwitch];
-    [view1 addSubview:loginSwitch];
+    [view1 addSubview:self.pwdSwitch];
+    [view1 addSubview:self.loginSwitch];
     
     UIButton *btn1 = [[UIButton alloc] initWithFrame:CGRectMake(80, 400, 100, 40)];
     [btn1 setTitle:@"Login" forState:UIControlStateNormal];
@@ -81,6 +85,13 @@
         self.loginBtn.enabled = YES;
     } else {
         self.loginBtn.enabled = NO;
+    }
+}
+
+- (void)switchDidChange{
+    NSLog(@"%@", self.pwdSwitch.isOn ? @"YES" : @"NO");
+    if(!self.pwdSwitch.isOn){
+        [self.loginSwitch setOn:NO animated:YES];
     }
 }
 
