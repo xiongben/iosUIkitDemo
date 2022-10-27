@@ -202,6 +202,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				CLASSPREFIX = XB;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					84924AA4290968C400EB0676 = {

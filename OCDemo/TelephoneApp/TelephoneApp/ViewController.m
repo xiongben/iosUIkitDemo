@@ -7,8 +7,12 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
-
+@interface ViewController ()<UITextFieldDelegate>
+@property(weak, nonatomic) UITextField *accountNumInput;
+@property(weak, nonatomic) UITextField *accountPwdInput;
+@property(weak, nonatomic) UISwitch *pwdSwitch;
+@property(weak, nonatomic) UISwitch *autoLogin;
+@property(weak, nonatomic) UIButton *loginBtn;
 @end
 
 @implementation ViewController
@@ -27,10 +31,18 @@
     UITextField *accountNumInput = [[UITextField alloc] initWithFrame:CGRectMake(80, 90, 220, 40)];
     accountNumInput.backgroundColor = [UIColor grayColor];
     accountNumInput.clearButtonMode = UITextFieldViewModeWhileEditing;
+    self.accountNumInput = accountNumInput;
     
     UITextField *accountPwdInput = [[UITextField alloc] initWithFrame:CGRectMake(80, 150, 220, 40)];
     accountPwdInput.backgroundColor = [UIColor grayColor];
     accountPwdInput.clearButtonMode = UITextFieldViewModeWhileEditing;
+    self.accountPwdInput = accountPwdInput;
+    
+    self.accountNumInput.delegate = self;
+    self.accountPwdInput.delegate = self;
+    
+    [self.accountNumInput addTarget:self action:@selector(textDidChange) forControlEvents:UIControlEventEditingChanged];
+    [self.accountPwdInput addTarget:self action:@selector(textDidChange) forControlEvents:UIControlEventEditingChanged];
     
     UIView *view1 = [[UIView alloc] initWithFrame:CGRectMake(20, 220, 350, 80)];
     [self.view addSubview:view1];
@@ -48,12 +60,28 @@
     [view1 addSubview:autoLogin];
     [view1 addSubview:pwdSwitch];
     [view1 addSubview:loginSwitch];
+    
+    UIButton *btn1 = [[UIButton alloc] initWithFrame:CGRectMake(80, 400, 100, 40)];
+    [btn1 setTitle:@"Login" forState:UIControlStateNormal];
+    [btn1 setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [btn1 setTitleColor:[UIColor brownColor] forState:UIControlStateDisabled];
+    self.loginBtn = btn1;
+    self.loginBtn.enabled = NO;
 
     
     [self.view addSubview:accountNum];
     [self.view addSubview:accountPwd];
-    [self.view addSubview:accountNumInput];
-    [self.view addSubview:accountPwdInput];
+    [self.view addSubview:self.accountNumInput];
+    [self.view addSubview:self.accountPwdInput];
+    [self.view addSubview:self.loginBtn];
+}
+
+- (void)textDidChange{
+    if(self.accountNumInput.text.length && self.accountPwdInput.text.length) {
+        self.loginBtn.enabled = YES;
+    } else {
+        self.loginBtn.enabled = NO;
+    }
 }
 
 
