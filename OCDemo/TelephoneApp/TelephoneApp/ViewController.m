@@ -6,6 +6,7 @@
 //
 
 #import "ViewController.h"
+#import "XBContactVC.h"
 
 @interface ViewController ()<UITextFieldDelegate>
 @property(weak, nonatomic) UITextField *accountNumInput;
@@ -36,6 +37,7 @@
     UITextField *accountPwdInput = [[UITextField alloc] initWithFrame:CGRectMake(80, 150, 220, 40)];
     accountPwdInput.backgroundColor = [UIColor grayColor];
     accountPwdInput.clearButtonMode = UITextFieldViewModeWhileEditing;
+    accountPwdInput.secureTextEntry = YES;
     self.accountPwdInput = accountPwdInput;
     
     self.accountNumInput.delegate = self;
@@ -43,6 +45,7 @@
     
     [self.accountNumInput addTarget:self action:@selector(textDidChange) forControlEvents:UIControlEventEditingChanged];
     [self.accountPwdInput addTarget:self action:@selector(textDidChange) forControlEvents:UIControlEventEditingChanged];
+  
     
     UIView *view1 = [[UIView alloc] initWithFrame:CGRectMake(20, 220, 350, 80)];
     [self.view addSubview:view1];
@@ -71,6 +74,7 @@
     [btn1 setTitleColor:[UIColor brownColor] forState:UIControlStateDisabled];
     self.loginBtn = btn1;
     self.loginBtn.enabled = NO;
+    [self.loginBtn addTarget:self action:@selector(toContactListPage) forControlEvents:UIControlEventTouchUpInside];
 
     
     [self.view addSubview:accountNum];
@@ -78,6 +82,8 @@
     [self.view addSubview:self.accountNumInput];
     [self.view addSubview:self.accountPwdInput];
     [self.view addSubview:self.loginBtn];
+    
+    [self textDidChange];
 }
 
 - (void)textDidChange{
@@ -93,6 +99,12 @@
     if(!self.pwdSwitch.isOn){
         [self.loginSwitch setOn:NO animated:YES];
     }
+}
+
+- (void)toContactListPage{
+    NSLog(@"%@", @"lllllll");
+    XBContactVC *xbContactVc = [[XBContactVC alloc] init];
+    [self.navigationController pushViewController: xbContactVc animated:YES];
 }
 
 

@@ -18,6 +18,7 @@
 		84924AC8290968C700EB0676 /* TelephoneAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84924AC7290968C700EB0676 /* TelephoneAppTests.m */; };
 		84924AD2290968C700EB0676 /* TelephoneAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84924AD1290968C700EB0676 /* TelephoneAppUITests.m */; };
 		84924AD4290968C700EB0676 /* TelephoneAppUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84924AD3290968C700EB0676 /* TelephoneAppUITestsLaunchTests.m */; };
+		84C3E228290EA5680073BCAE /* XBContactVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C3E227290EA5680073BCAE /* XBContactVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		84924ACD290968C700EB0676 /* TelephoneAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TelephoneAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84924AD1290968C700EB0676 /* TelephoneAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TelephoneAppUITests.m; sourceTree = "<group>"; };
 		84924AD3290968C700EB0676 /* TelephoneAppUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TelephoneAppUITestsLaunchTests.m; sourceTree = "<group>"; };
+		84C3E226290EA5680073BCAE /* XBContactVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBContactVC.h; sourceTree = "<group>"; };
+		84C3E227290EA5680073BCAE /* XBContactVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBContactVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +114,8 @@
 				84924AAB290968C400EB0676 /* SceneDelegate.h */,
 				84924AAC290968C400EB0676 /* SceneDelegate.m */,
 				84924AAE290968C400EB0676 /* ViewController.h */,
+				84C3E226290EA5680073BCAE /* XBContactVC.h */,
+				84C3E227290EA5680073BCAE /* XBContactVC.m */,
 				84924AAF290968C400EB0676 /* ViewController.m */,
 				84924AB1290968C400EB0676 /* Main.storyboard */,
 				84924AB7290968C600EB0676 /* Assets.xcassets */,
@@ -271,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84924ABE290968C600EB0676 /* main.m in Sources */,
+				84C3E228290EA5680073BCAE /* XBContactVC.m in Sources */,
 				84924AB0290968C400EB0676 /* ViewController.m in Sources */,
 				84924AAA290968C400EB0676 /* AppDelegate.m in Sources */,
 				84924AB6290968C400EB0676 /* TelephoneApp.xcdatamodeld in Sources */,
