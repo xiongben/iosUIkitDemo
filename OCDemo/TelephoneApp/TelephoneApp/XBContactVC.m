@@ -16,6 +16,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Delete" style:UIBarButtonItemStylePlain target:self action:@selector(delItem)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Add" style:UIBarButtonItemStylePlain target:self action:@selector(addItem)];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -89,4 +91,11 @@
 }
 */
 
+- (void)delItem{
+    NSLog(@"%@", @"del something");
+}
+
+- (void)addItem{
+    NSLog(@"%@", @"add something");
+}
 @end

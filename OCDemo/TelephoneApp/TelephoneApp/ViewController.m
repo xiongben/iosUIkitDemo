@@ -20,6 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.view setBackgroundColor:[UIColor whiteColor]];
     
     self.navigationItem.title = @"welcome to app!";
     
@@ -104,6 +105,7 @@
 - (void)toContactListPage{
     NSLog(@"%@", @"lllllll");
     XBContactVC *xbContactVc = [[XBContactVC alloc] init];
+
     [self.navigationController pushViewController: xbContactVc animated:YES];
 }
 
