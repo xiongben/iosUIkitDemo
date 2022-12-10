@@ -92,7 +92,16 @@
 */
 
 - (void)delItem{
-    NSLog(@"%@", @"del something");
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"确定删除吗？" message:@"message12345" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *sure = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            NSLog(@"确定");
+        }];
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            NSLog(@"取消");
+        }];
+    [alert addAction:sure];
+    [alert addAction:cancel];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 - (void)addItem{
