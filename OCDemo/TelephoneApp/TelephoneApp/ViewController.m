@@ -105,7 +105,7 @@
 - (void)toContactListPage{
     NSLog(@"%@", @"lllllll");
     XBContactVC *xbContactVc = [[XBContactVC alloc] init];
-
+    xbContactVc.accountName = @"坦克世界";
     [self.navigationController pushViewController: xbContactVc animated:YES];
 }
 
