@@ -7,7 +7,11 @@
 
 #import "XBContactVC.h"
 
+#import "AFNetworking.h"
+#import "AFURLSessionManager.h"
+
 @interface XBContactVC ()
+@property (nonatomic, strong) NSArray *res;
 
 @end
 
@@ -26,7 +30,25 @@ NSString *ID = @"Tel";
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+
+    NSURL *URL = [NSURL URLWithString:@"https://api.github.com/users"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+
+    NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request uploadProgress:nil downloadProgress:nil completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+            if (error) {
+                NSLog(@"Error: %@", error);
+            } else {
+                self.res = (NSArray *)responseObject;
+                [self.tableView reloadData];
+//                NSLog(@"%@", self.res);
+            }
+    }];
+    [dataTask resume];
 }
+
 
 #pragma mark - Table view data source
 
@@ -35,14 +57,16 @@ NSString *ID = @"Tel";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return self.res.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID forIndexPath:indexPath];
-    
-    cell.textLabel.text = @"rrr";
+    NSDictionary *indexDic = (NSDictionary *)[_res objectAtIndex:indexPath.row];
+    NSString* node_id =  [indexDic objectForKey:@"node_id"];
+//    NSLog(@"%@", indexDic);
+    cell.textLabel.text = node_id;
     
     return cell;
 }

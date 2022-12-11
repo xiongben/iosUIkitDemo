@@ -7,6 +7,8 @@
 
 #import "ViewController.h"
 #import "XBContactVC.h"
+#import "AFNetworking.h"
+#import "AFURLSessionManager.h"
 
 @interface ViewController ()<UITextFieldDelegate>
 @property(weak, nonatomic) UITextField *accountNumInput;
@@ -85,6 +87,22 @@
     [self.view addSubview:self.loginBtn];
     
     [self textDidChange];
+    
+    
+//    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+//    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+//
+//    NSURL *URL = [NSURL URLWithString:@"https://api.github.com/users"];
+//    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+//
+//    NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request uploadProgress:nil downloadProgress:nil completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+//            if (error) {
+//                NSLog(@"Error: %@", error);
+//            } else {
+//                NSLog(@"%@", responseObject);
+//            }
+//    }];
+//    [dataTask resume];
 }
 
 - (void)textDidChange{

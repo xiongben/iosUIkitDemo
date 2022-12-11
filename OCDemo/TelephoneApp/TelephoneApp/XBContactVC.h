@@ -10,7 +10,6 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface XBContactVC : UITableViewController
-
 @property (nonatomic, strong) NSString *accountName;
 
 @end
