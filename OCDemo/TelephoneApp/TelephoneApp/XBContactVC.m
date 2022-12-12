@@ -9,6 +9,7 @@
 
 #import "AFNetworking.h"
 #import "AFURLSessionManager.h"
+#import "XBAddContactVC.h"
 
 @interface XBContactVC ()
 @property (nonatomic, strong) NSArray *res;
@@ -16,6 +17,14 @@
 @end
 
 @implementation XBContactVC
+
+- (instancetype)initWithVal: (NSString*) value{
+    if(self = [super init]) {
+        self.accountName = value;
+    }
+    return self;
+}
+
 NSString *ID = @"Tel";
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -131,5 +140,7 @@ NSString *ID = @"Tel";
 
 - (void)addItem{
     NSLog(@"%@", @"add something");
+    XBAddContactVC *xbAddContactVC = [[XBAddContactVC alloc] init];
+    [self.navigationController pushViewController: xbAddContactVC animated:YES];
 }
 @end

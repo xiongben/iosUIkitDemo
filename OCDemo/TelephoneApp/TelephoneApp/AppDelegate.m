@@ -7,6 +7,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "XBContactVC.h"
 
 @interface AppDelegate ()
 
@@ -22,7 +23,7 @@
 //    UIViewController *vc = [storyBoard instantiateInitialViewController];
 //    self.window.rootViewController = vc;
     
-    ViewController *rootVC = [[ViewController alloc] init];
+    XBContactVC *rootVC = [[XBContactVC alloc] initWithVal:@"虎式坦克"];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:rootVC];
     
     self.window.rootViewController = nav;
