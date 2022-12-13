@@ -7,6 +7,7 @@
 
 #import "XBContactVC.h"
 #import "XBAddContactVC.h"
+#import "XBContactItem.h"
 @interface XBAddContactVC ()<UITextFieldDelegate>
 @property(weak, nonatomic) UITextField *nameTextF;
 @property(weak, nonatomic) UITextField *phoneTextF;
@@ -72,7 +73,9 @@
 
 - (void)toContactListPage{
     XBContactVC *xbContactVc = [[XBContactVC alloc] init];
-    xbContactVc.accountName = @"坦克世界";
+    xbContactVc.accountName = @"坦克8888世界";
+    xbContactVc.accountName2 = @"=====";
+    xbContactVc.contactItem = [XBContactItem itemWithName:@"宝石" phone:@"2222222"];
     [self.navigationController pushViewController: xbContactVc animated:YES];
 }
 

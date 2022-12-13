@@ -10,6 +10,7 @@
 #import "AFNetworking.h"
 #import "AFURLSessionManager.h"
 #import "XBAddContactVC.h"
+#import "XBContactItem.h"
 
 @interface XBContactVC ()
 @property (nonatomic, strong) NSArray *res;
@@ -25,10 +26,19 @@
     return self;
 }
 
+- (instancetype)initWithItemVal:(XBContactItem *)value{
+    if (self = [super init]) {
+        self.contactItem = value;
+    }
+    return self;
+}
+
 NSString *ID = @"Tel";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    NSLog(@"%@", _contactItem.name);
+    NSLog(@"%@", _accountName2);
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Delete" style:UIBarButtonItemStylePlain target:self action:@selector(delItem)];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Add" style:UIBarButtonItemStylePlain target:self action:@selector(addItem)];
     self.navigationItem.title = _accountName;
