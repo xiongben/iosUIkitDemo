@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		847C1B942948374400F5B1A5 /* XBContactItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C1B932948374400F5B1A5 /* XBContactItem.m */; };
 		847DA9E82945E347008B94B9 /* AFNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = 847DA9E72945E347008B94B9 /* AFNetworking */; };
 		84924AAA290968C400EB0676 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84924AA9290968C400EB0676 /* AppDelegate.m */; };
 		84924AAD290968C400EB0676 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84924AAC290968C400EB0676 /* SceneDelegate.m */; };
@@ -41,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		847C1B922948374400F5B1A5 /* XBContactItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBContactItem.h; sourceTree = "<group>"; };
+		847C1B932948374400F5B1A5 /* XBContactItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBContactItem.m; sourceTree = "<group>"; };
 		84924AA5290968C400EB0676 /* TelephoneApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TelephoneApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84924AA8290968C400EB0676 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84924AA9290968C400EB0676 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -124,6 +127,8 @@
 				84A46F0C2947624E00D992BD /* XBAddContactVC.m */,
 				84924AAE290968C400EB0676 /* ViewController.h */,
 				84924AAF290968C400EB0676 /* ViewController.m */,
+				847C1B922948374400F5B1A5 /* XBContactItem.h */,
+				847C1B932948374400F5B1A5 /* XBContactItem.m */,
 				84924AB1290968C400EB0676 /* Main.storyboard */,
 				84924AB7290968C600EB0676 /* Assets.xcassets */,
 				84924AB9290968C600EB0676 /* LaunchScreen.storyboard */,
@@ -295,6 +300,7 @@
 				84924AAA290968C400EB0676 /* AppDelegate.m in Sources */,
 				84924AB6290968C400EB0676 /* TelephoneApp.xcdatamodeld in Sources */,
 				84924AAD290968C400EB0676 /* SceneDelegate.m in Sources */,
+				847C1B942948374400F5B1A5 /* XBContactItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
